@@ -40,45 +40,45 @@ class Percolation {
 		grid = new boolean[num][num];
 		count = 0;
 		top = 0;
-		bottom = (num * num) + 1;
+		bottom = num * num + 1;
 		percCheck = new WeightedUnion(num * num + 2);
 		n = num;
 	}
 
 	public int getNum(final int row, final int col) {
-		return (row - 1) * n + col;
+		return row * n + col + 1;
 	}
 	// open site (row, col) if it is not open already
 	public void open(int row, int col) {
 		if (isOpen(row, col)) {
 			return;
 		} else {
-			grid[row - 1][col - 1] = true;
+			grid[row][col] = true;
 			count += 1;
 		}
-		if (row == 1) {
+		if (row == 0) {
 			percCheck.union(getNum(row, col), top);
 		}
-		if (row == n) {
+		if (row == n - 1) {
 			percCheck.union(getNum(row, col), bottom);
 		}
-		if (isOpen(row, col - 1) && col > 1) {
+		if (isOpen(row, col - 1) && col > 0) {
 			percCheck.union(getNum(row, col), getNum(row, col - 1));
 		}
-		if (isOpen(row, col + 1) && col < n) {
+		if (isOpen(row, col + 1) && col < n - 1) {
 			percCheck.union(getNum(row, col), getNum(row, col + 1));
 		}
-		if (isOpen(row - 1, col) && row > 1) {
+		if (isOpen(row - 1, col) && row > 0) {
 			percCheck.union(getNum(row, col), getNum(row - 1, col));
 		}
-		if (isOpen(row + 1, col) && row < n) {
+		if (isOpen(row + 1, col) && row < n - 1) {
 			percCheck.union(getNum(row, col), getNum(row + 1, col));
 		}
 	}
 
 	public boolean isOpen(int row, int col) {
 		// is site (row, col) open?
-		return grid[row - 1][col - 1];
+		return grid[row][col];
 	}
 	// public boolean isFull(int row, int col)  // is site (row, col) full?
 	public     int numberOfOpenSites() {
@@ -103,7 +103,7 @@ public class Solution {
 		while (scan.hasNext()) {
 			int p = scan.nextInt();
 			int q = scan.nextInt();
-			perc.open(p, q);
+			perc.open(p - 1, q - 1);
 		}
 		System.out.println(perc.percolates());
 	}
