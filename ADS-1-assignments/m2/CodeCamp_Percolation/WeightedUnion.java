@@ -31,12 +31,12 @@ class WeightedUnion {
 	 *
 	 * @return     root of p.
 	 */
-	public int find(final int p) {
+	public int find(int p) {
 		while (p != id[p]) {
-			id[p] = id[id[p]];
+			// id[p] = id[id[p]];
+			p = id[p];
 		}
-		int temp = id[p];
-		return temp;
+		return p;
 	}
 
 	/**
