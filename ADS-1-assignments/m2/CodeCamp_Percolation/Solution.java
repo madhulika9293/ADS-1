@@ -1,8 +1,9 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-
-
+/**
+ * Class for percolation.
+ */
 class Percolation {
 	// create n-by-n grid, with all sites blocked
 
@@ -38,7 +39,6 @@ class Percolation {
 	 */
 	public Percolation(int num) {
 		grid = new boolean[num][num];
-		// System.out.println(Arrays.deepToString(grid));
 		count = 0;
 		top = 0;
 		bottom = num * num + 1;
@@ -46,17 +46,29 @@ class Percolation {
 		n = num;
 	}
 
+	/**
+	 * Gets the number of the site in the union array.
+	 *
+	 * @param      row   The row.
+	 * @param      col   The column.
+	 *
+	 * @return     The number.
+	 */
 	public int getNum(final int row, final int col) {
 		return row * n + col + 1;
 	}
+	
 	// open site (row, col) if it is not open already
+	
+	/**
+	 * Opens a site.
+	 *
+	 * @param      row   The row.
+	 * @param      col   The column.
+	 */
 	public void open(int row, int col) {
-		// System.out.println(row);
-		// System.out.println(col);
-		// System.out.println(isOpen(row, col));
 		if (!(isOpen(row, col))) {
 			grid[row][col] = true;
-			// System.out.println(Arrays.deepToString(grid));
 			count += 1;
 		}
 		if (row == 0) {
@@ -80,15 +92,34 @@ class Percolation {
 		return;
 	}
 
+	/**
+	 * Determines if open.
+	 *
+	 * @param      row   The row
+	 * @param      col   The col
+	 *
+	 * @return     True if open, False otherwise.
+	 */
 	public boolean isOpen(int row, int col) {
-		// System.out.println(Arrays.deepToString(grid));
 		return grid[row][col];
 	}
+
 	// public boolean isFull(int row, int col)  // is site (row, col) full?
-	public     int numberOfOpenSites() {
+	
+	/**
+	 * Number of open sites.
+	 *
+	 * @return     Integer.
+	 */
+	public int numberOfOpenSites() {
 		// number of open sites
 		return count;
 	}
+	/**
+	 * checks whether the system percolates or not.
+	 *
+	 * @return     boolean
+	 */
 	public boolean percolates() {
 		// does the system percolate?
 		return percCheck.connected(top, bottom);
@@ -98,12 +129,14 @@ class Percolation {
 
 // You can implement the above API to solve the problem
 
+/**
+ * Class for solution.
+ */
 public class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int num = scan.nextInt();
 		Percolation perc = new Percolation(num);
-		// System.out.println(Arrays.deepToString(perc));
 		while (scan.hasNext()) {
 			int p = scan.nextInt();
 			int q = scan.nextInt();
