@@ -52,9 +52,10 @@ class Percolation {
 	public void open(int row, int col) {
 		if (isOpen(row, col)) {
 			return;
+		} else {
+			grid[row - 1][col - 1] = true;
+			count += 1;
 		}
-		grid[row - 1][col - 1] = true;
-		count += 1;
 		if (row == 1) {
 			percCheck.union(getNum(row, col), top);
 		}
