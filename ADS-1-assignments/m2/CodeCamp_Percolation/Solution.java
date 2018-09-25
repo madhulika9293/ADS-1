@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -37,7 +36,7 @@ class Percolation {
    *
    * @param      num     Size of the grid.
    */
-  public Percolation(int num) {
+  Percolation(final int num) {
     grid = new boolean[num][num];
     count = 0;
     top = 0;
@@ -132,7 +131,7 @@ class Percolation {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 
   /**
    * Constructs the object.
@@ -145,7 +144,7 @@ public class Solution {
    *
    * @param      args  The arguments
    */
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     Scanner scan = new Scanner(System.in);
     int num = scan.nextInt();
     Percolation perc = new Percolation(num);
