@@ -41,7 +41,7 @@ class Percolation {
 		count = 0;
 		top = 0;
 		bottom = (num * num) + 1;
-		percCheck = new WeightedUnion(n * n + 2);
+		percCheck = new WeightedUnion(num * num + 2);
 		n = num;
 	}
 
