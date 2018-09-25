@@ -61,16 +61,16 @@ class Percolation {
 		if (row == n) {
 			percCheck.union(getNum(row, col), bottom);
 		}
-		if (isOpen(row, col - 1)) {
+		if (isOpen(row, col - 1) && col > 1) {
 			percCheck.union(getNum(row, col), getNum(row, col - 1));
 		}
-		if (isOpen(row, col + 1)) {
+		if (isOpen(row, col + 1) && col < n) {
 			percCheck.union(getNum(row, col), getNum(row, col + 1));
 		}
-		if (isOpen(row - 1, col)) {
+		if (isOpen(row - 1, col) && row > 1) {
 			percCheck.union(getNum(row, col), getNum(row - 1, col));
 		}
-		if (isOpen(row + 1, col)) {
+		if (isOpen(row + 1, col) && row < n) {
 			percCheck.union(getNum(row, col), getNum(row + 1, col));
 		}
 	}
