@@ -15,10 +15,10 @@ class WeightedUnion {
 	 *
 	 * @param      n     Total number of elements in the tree.
 	 */
-	WeightedUnion(int n) {
-		id = new int[n];
-		sz = new int[n];
-		for (int i = 0; i < n; i++) {
+	WeightedUnion(int number) {
+		id = new int[number];
+		sz = new int[number];
+		for (int i = 0; i < number; i++) {
 			id[i] = i;
 			sz[i] = 1;
 		}

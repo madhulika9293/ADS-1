@@ -46,7 +46,7 @@ class Percolation {
 	}
 
 	public int getNum(final int row, final int col) {
-		return ((row - 1) * n + col) ;
+		return (row - 1) * n + col;
 	}
 	// open site (row, col) if it is not open already
 	public void open(int row, int col) {
