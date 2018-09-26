@@ -33,6 +33,11 @@ class Sorted {
         res[size] = n1[i];
         size += 1;
         i += 1;
+        System.out.println(n1[i]);
+        System.out.println(n2[j]);
+        System.out.println(i < n1.length);
+        System.out.println(j < n2.length);
+        System.out.println(i < n1.length && j < n2.length && n1[i] <= n2[j]);
       }
       if (i < n1.length && j < n2.length && n1[i] > n2[j]) {
         res[size] = n2[j];
