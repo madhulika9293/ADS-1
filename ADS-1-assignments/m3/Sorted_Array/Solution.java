@@ -52,7 +52,7 @@ class Sorted {
       }
 
     }
-    return Arrays.toString(res);
+    return Arrays.toString(res).replaceAll("[\\]\\[ ]","");
   }
 }
 
