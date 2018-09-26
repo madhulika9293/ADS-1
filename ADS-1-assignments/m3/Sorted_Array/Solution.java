@@ -14,8 +14,8 @@ public final class Solution {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
 
-    int num1 = scan.nextInt();
-    int num2 = scan.nextInt();
+    int num1 = Integer.parseInt(scan.nextLine());
+    int num2 = Integer.parseInt(scan.nextLine());
 
     String[] a1 = scan.nextLine().split(",");
     String[] a2 = scan.nextLine().split(",");
