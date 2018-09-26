@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * Class for sorted.
  */
-class Sorted {
+final class Sorted {
   /**
    * Constructs the object.
    */
@@ -52,7 +52,7 @@ class Sorted {
       }
 
     }
-    return Arrays.toString(res).replaceAll("[\\]\\[ ]","");
+    return Arrays.toString(res).replaceAll("[\\]\\[ ]", "");
   }
 }
 
@@ -66,7 +66,12 @@ public final class Solution {
   private Solution() {
     // unused
   }
-  public static void main(String[] args) {
+  /**
+   * main function.
+   *
+   * @param      args  The arguments
+   */
+  public static void main(final String[] args) {
     Scanner scan = new Scanner(System.in);
 
     int num1 = Integer.parseInt(scan.nextLine());
