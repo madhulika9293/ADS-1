@@ -24,11 +24,13 @@ public final class Solution {
     int[] arr2 = new int[num2];
 
     for (int i = 0; i < num1; i++) {
-      arr1[i] = Integer.parseInt(a1[i]);
+      String temp = a1[i];
+      arr1[i] = Integer.parseInt(temp);
     }
 
     for (int i = 0; i < num2; i++) {
-      arr2[i] = Integer.parseInt(a2[i]);
+      String temp = a2[i];
+      arr2[i] = Integer.parseInt(temp);
     }
 
     System.out.println(Arrays.toString(arr1));
