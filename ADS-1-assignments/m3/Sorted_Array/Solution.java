@@ -92,8 +92,8 @@ public final class Solution {
       }
     }
 
-    System.out.println(Arrays.toString(arr1));
-    System.out.println(Arrays.toString(arr2));
+    // System.out.println(Arrays.toString(arr1));
+    // System.out.println(Arrays.toString(arr2));
     System.out.println(Sorted.addArr(arr1, arr2));
   }
 }
