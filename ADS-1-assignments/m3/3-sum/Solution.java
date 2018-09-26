@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * Class for three sum.
  */
-class ThreeSum {
+final class ThreeSum {
   /**
    * Constructs the object.
    */
