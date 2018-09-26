@@ -43,12 +43,26 @@ class ThreeSum {
   }
 }
 
+/**
+ * Class for Solution.
+ */
 public final class Solution {
-  public static void main(String[] args) {
+  /**
+   * Constructs the object.
+   */
+  private Solution() {
+    // unused constructor
+  }
+  /**
+   * Main function: Reads in the input and prints out the # of triplets.
+   *
+   * @param      args  The arguments
+   */
+  public static void main(final String[] args) {
     Scanner scan = new Scanner(System.in);
-    int N = scan.nextInt();
-    int[] inpArr = new int[N];
-    for (int i = 0; i < N; i++) {
+    int num = scan.nextInt();
+    int[] inpArr = new int[num];
+    for (int i = 0; i < num; i++) {
       inpArr[i] = scan.nextInt();
     }
     // System.out.println(Arrays.toString(inpArr));
