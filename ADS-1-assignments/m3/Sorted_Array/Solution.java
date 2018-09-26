@@ -29,12 +29,12 @@ class Sorted {
     int j = 0;
 
     while (size < len) {
-      if (n1[i] <= n2[j] && i < n1.length && j < n2.length) {
+      if (i < n1.length && j < n2.length && n1[i] <= n2[j]) {
         res[size] = n1[i];
         size += 1;
         i += 1;
       }
-      if (n1[i] > n2[j]  && i < n1.length && j < n2.length) {
+      if (i < n1.length && j < n2.length && n1[i] > n2[j]) {
         res[size] = n2[j];
         size += 1;
         j += 1;
