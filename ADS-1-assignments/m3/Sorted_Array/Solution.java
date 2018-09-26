@@ -29,12 +29,10 @@ class Sorted {
     int j = 0;
 
     while (size < len) {
+      // System.out.println(i < n1.length && j < n2.length && n1[i] <= n2[j]);
       if (i < n1.length && j < n2.length && n1[i] <= n2[j]) {
-        System.out.println(n1[i]);
-        System.out.println(n2[j]);
-        System.out.println(i < n1.length);
-        System.out.println(j < n2.length);
-        System.out.println(i < n1.length && j < n2.length && n1[i] <= n2[j]);
+        // System.out.println(n1[i]);
+        // System.out.println(n2[j]);
         res[size] = n1[i];
         size += 1;
         i += 1;
@@ -43,7 +41,16 @@ class Sorted {
         res[size] = n2[j];
         size += 1;
         j += 1;
+      } else if (i < n1.length) {
+        res[size] = n1[i];
+        i += 1;
+        size += 1;
+      } else if (j < n2.length) {
+        res[size] = n2[j];
+        j += 1;
+        size += 1;
       }
+
     }
     return Arrays.toString(res);
   }
