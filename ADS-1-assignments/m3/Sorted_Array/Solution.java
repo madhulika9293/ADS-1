@@ -37,12 +37,11 @@ class Sorted {
         size += 1;
         i += 1;
       }
-      // if (i < n1.length && j < n2.length && n1[i] > n2[j]) {
-      //   res[size] = n2[j];
-      //   size += 1;
-      //   j += 1;
-      // }
-      else if (i < n1.length) {
+      if (i < n1.length && j < n2.length && n1[i] > n2[j]) {
+        res[size] = n2[j];
+        size += 1;
+        j += 1;
+      } else if (i < n1.length) {
         res[size] = n1[i];
         i += 1;
         size += 1;
