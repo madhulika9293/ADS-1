@@ -1,8 +1,16 @@
 import java.util.Scanner;
 
+/**
+ * Class to check for balanced paranthesis.
+ */
 class Balparen {
-
+  /**
+   * inputs.
+   */
   private char[] parenthesis;
+  /**
+   * Makes a stack of the given inputs.
+   */
   private Stack1<Character> stackBracket;
 
   /**
@@ -74,7 +82,6 @@ public final class Solution {
     // System.out.println(noOFLines);
 
     while (sc.hasNext()) {
-      // System.out.println("Reached");
       String input = new String(sc.nextLine());
       // System.out.println(input);
       Balparen checkThisString = new Balparen(input);
