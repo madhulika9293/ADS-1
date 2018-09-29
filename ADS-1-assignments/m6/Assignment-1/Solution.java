@@ -102,14 +102,6 @@ final class AddLargeNumbers {
             res.add(carrAdd);
         }
 
-        // if (!s1.isEmpty() && s2.isEmpty() && carry == 1) {
-        //     int sum = 0;
-        //     int dig1 = Character.getNumericValue(s1.pop());
-        //     sum = carry + dig1;            
-        //     char carrAdd = (char) (carry + '0');
-        //     res.add(carrAdd);
-        // }
-
         while (!s1.isEmpty() && s2.isEmpty()) {
             int sum = 0;
             int dig1 = Character.getNumericValue(s1.pop());

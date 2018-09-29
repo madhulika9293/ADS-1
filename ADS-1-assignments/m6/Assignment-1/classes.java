@@ -1,3 +1,6 @@
+/**
+ * Class for node.
+ */
 class Node {
 	char data;
 	Node next;
@@ -10,6 +13,9 @@ class Node {
 	}
 }
 
+/**
+ * Class for iterator.
+ */
 class Iterator {
 	Node current;
 
@@ -28,6 +34,9 @@ class Iterator {
 	}
 }
 
+/**
+ * List of linked list.
+ */
 class LinkedList {
 
 
@@ -69,6 +78,9 @@ class LinkedList {
 
 }
 
+/**
+ * class for Stack.
+ */
 class Stack {
 	LinkedList listInp;
 
