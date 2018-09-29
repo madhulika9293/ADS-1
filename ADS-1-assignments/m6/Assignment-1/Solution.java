@@ -2,8 +2,10 @@ import java.util.Scanner;
 /**
  * Class for add large numbers.
  */
-class AddLargeNumbers {
-
+final class AddLargeNumbers {
+    /**
+     * Constructs the object.
+     */
     private AddLargeNumbers() {
         // unused
     }
@@ -54,6 +56,9 @@ class AddLargeNumbers {
             final LinkedList list2) {
         LinkedList res = new LinkedList();
 
+        final int nine = 9;
+        final int ten = 10;
+        
         // list1.print();
         // list2.print();
 
@@ -69,7 +74,6 @@ class AddLargeNumbers {
             s2.push(it2.next());
         }
 
-        // Stack carry = new Stack();
         int carry = 0;
 
         while (!s1.isEmpty() && !s2.isEmpty()) {
@@ -81,11 +85,11 @@ class AddLargeNumbers {
             } else if (carry == 1) {
                 sum = dig1 + dig2 + carry;
             }
-            if (sum > 9) {
+            if (sum > nine) {
                 carry = 1;
             }
 
-            int toAdd = sum % 10;
+            int toAdd = sum % ten;
             char addFin = (char) (toAdd + '0');
 
             res.add(addFin);
@@ -104,11 +108,11 @@ class AddLargeNumbers {
             } else if (carry == 1) {
                 sum = dig1 + carry;
             }
-            if (sum > 9) {
+            if (sum > nine) {
                 carry = 1;
             }
 
-            int toAdd = sum % 10;
+            int toAdd = sum % ten;
             char addFin = (char) (toAdd + '0');
 
             res.add(addFin);
@@ -123,11 +127,11 @@ class AddLargeNumbers {
             } else if (carry == 1) {
                 sum = dig2 + carry;
             }
-            if (sum > 9) {
+            if (sum > nine) {
                 carry = 1;
             }
 
-            int toAdd = sum % 10;
+            int toAdd = sum % ten;
             char addFin = (char) (toAdd + '0');
 
             res.add(addFin);
