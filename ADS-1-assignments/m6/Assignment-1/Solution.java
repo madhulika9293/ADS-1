@@ -99,10 +99,10 @@ class AddLargeNumbers {
 
         }
 
-        // if (carry == 1) {
-        //     char carrAdd = (char) (carry + '0');
-        //     res.add(carrAdd);
-        // }
+        if (s1.isEmpty() && s2.isEmpty() && carry == 1) {
+            char carrAdd = (char) (carry + '0');
+            res.add(carrAdd);
+        }
         return res;
     }
 }
