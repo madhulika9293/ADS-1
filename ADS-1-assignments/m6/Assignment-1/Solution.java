@@ -128,19 +128,19 @@ final class AddLargeNumbers {
         }
 
         while (!s2.isEmpty() && s1.isEmpty()) {
-            int sum = 0;
+            // int sum = 0;
             int dig2 = Character.getNumericValue(s2.pop());
-            if (carry == 0) {
-                sum = dig2;
-            } else if (carry == 1) {
-                sum = dig2 + carry;
-            }
-            if (sum > nine) {
-                carry = 1;
-            }
+            // if (carry == 0) {
+            //     sum = dig2;
+            // } else if (carry == 1) {
+            //     sum = dig2 + carry;
+            // }
+            // if (sum > nine) {
+            //     carry = 1;
+            // }
 
-            int toAdd = sum % ten;
-            char addFin = (char) (toAdd + '0');
+            // int toAdd = sum % ten;
+            char addFin = (char) (dig2 + '0');
 
             res.add(addFin);
 
