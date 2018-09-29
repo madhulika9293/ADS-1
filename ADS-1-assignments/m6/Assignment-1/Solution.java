@@ -3,7 +3,7 @@ class AddLargeNumbers {
 
     public static LinkedList numberToDigits(String number) {
         LinkedList res = new LinkedList();
-        for (int i = number.length()-1; i >=0; i--) {
+        for (int i = number.length() - 1; i >= 0; i--) {
             res.add(number.charAt(i));
             // System.out.println(number.charAt(i));
         }
@@ -59,6 +59,10 @@ class AddLargeNumbers {
             char addFin = (char)(toAdd + '0');
 
             res.add(addFin);
+        }
+        if (carry == 1) {
+            char carrAdd = (char)(carry + '0');
+            res.add(carrAdd);
         }
         return res;
     }
