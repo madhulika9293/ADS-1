@@ -1,16 +1,17 @@
-class LinkedList {
-	
-	class Node {
-		char data;
-		Node next;
+class Node {
+	char data;
+	Node next;
 
-		Node() {}
+	Node() {}
 
-		Node(char item1) {
-			this.data = item1;
-			this.next = null;
-		}
+	Node(char item1) {
+		this.data = item1;
+		this.next = null;
 	}
+}
+
+class LinkedList {
+
 
 	private Node head;
 
@@ -22,5 +23,9 @@ class LinkedList {
 
 	public boolean isEmpty() {
 		return head == null;
+	}
+
+	public Node getHead() {
+		return head;
 	}
 }
