@@ -1,0 +1,2 @@
+https://www.google.co.in/search?q=iterate+over+linked+list+java&oq=iterate+over+linked&aqs=chrome.2.0j69i57j0l4.8494j0j1&sourceid=chrome&ie=UTF-8
+https://stackoverflow.com/questions/4767615/java-iterating-a-linked-list

@@ -10,6 +10,24 @@ class Node {
 	}
 }
 
+class Iterator {
+	Node current;
+
+	public Iterator(Node first) {
+		current = first;
+	}
+
+	public boolean hasNext() {
+		return current != null;
+	}
+
+	public char next() {
+		char dt = current.data;
+		current = current.next;
+		return dt;
+	}
+}
+
 class LinkedList {
 
 
@@ -31,5 +49,17 @@ class LinkedList {
 
 	public char getData(Node node) {
 		return node.data;
+	}
+
+	public Node getNext(Node node) {
+		return node.next;
+	}
+
+	public void print() {
+		Node temp = head;
+		while (temp != null) {
+			System.out.println(temp.data + "-->");
+			temp = temp.next;
+		}
 	}
 }

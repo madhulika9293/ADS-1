@@ -5,16 +5,18 @@ class AddLargeNumbers {
         LinkedList res = new LinkedList();
         for (int i = 0; i < number.length(); i++) {
             res.add(number.charAt(i));
+            // System.out.println(number.charAt(i));
         }
+        // res.print();
+        // System.out.println("reached");
         return res;
     }
 
     public static String digitsToNumber(LinkedList list) {
         String out = "";
-        Node temp = list.getHead();
-        while (!list.isEmpty()) {
-            out += list.getData(temp);
-            temp = temp.next;
+        Iterator it = new Iterator(list.getHead());
+        while (it.hasNext()) {
+            out += it.next();
         }
         return out;
     }
