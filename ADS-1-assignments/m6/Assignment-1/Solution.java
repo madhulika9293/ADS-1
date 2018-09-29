@@ -100,20 +100,28 @@ final class AddLargeNumbers {
             res.add(carrAdd);
         }
 
-        while (!s1.isEmpty() && s2.isEmpty()) {
-            int sum = 0;
-            int dig1 = Character.getNumericValue(s1.pop());
-            if (carry == 0) {
-                sum = dig1;
-            } else if (carry == 1) {
-                sum = dig1 + carry;
-            }
-            if (sum > nine) {
-                carry = 1;
-            }
+        // if (!s1.isEmpty() && s2.isEmpty() && carry == 1) {
+        //     int sum = 0;
+        //     int dig1 = Character.getNumericValue(s1.pop());
+        //     sum = carry + dig1;            
+        //     char carrAdd = (char) (carry + '0');
+        //     res.add(carrAdd);
+        // }
 
-            int toAdd = sum % ten;
-            char addFin = (char) (toAdd + '0');
+        while (!s1.isEmpty() && s2.isEmpty()) {
+            // int sum = 0;
+            int dig1 = Character.getNumericValue(s1.pop());
+            // if (carry == 0) {
+            //     sum = dig1;
+            // } else if (carry == 1) {
+            //     sum = dig1 + carry;
+            // }
+            // if (sum > nine) {
+            //     carry = 1;
+            // }
+
+            // int toAdd = sum % ten;
+            char addFin = (char) (dig1 + '0');
 
             res.add(addFin);
 
