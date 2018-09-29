@@ -59,19 +59,8 @@ class AddLargeNumbers {
             int toAdd = sum % 10;
             char addFin = (char) (toAdd + '0');
 
-            if (carry == 1) {
-                char carrAdd = (char) (carry + '0');
-                res.add(carrAdd);
-            }
-
             res.add(addFin);
         }
-
-        if (carry == 1) {
-            char carrAdd = (char) (carry + '0');
-            res.add(carrAdd);
-        }
-
         // while (!s1.isEmpty()) {
         //     int sum = 0;
         //     int dig1 = Character.getNumericValue(s1.pop());
@@ -109,6 +98,10 @@ class AddLargeNumbers {
 
         // }
 
+        if (carry == 1) {
+            char carrAdd = (char) (carry + '0');
+            res.add(carrAdd);
+        }
         return res;
     }
 }
