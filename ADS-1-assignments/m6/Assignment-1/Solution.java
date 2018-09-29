@@ -66,7 +66,8 @@ class AddLargeNumbers {
 
             res.add(addFin);
         }
-        if (s1.isEmpty() && s2.isEmpty() && carry == 1) {
+
+        if (carry == 1) {
             char carrAdd = (char) (carry + '0');
             res.add(carrAdd);
         }
