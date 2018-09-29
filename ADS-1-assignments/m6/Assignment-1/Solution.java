@@ -28,6 +28,40 @@ class AddLargeNumbers {
 
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
         LinkedList res = new LinkedList();
+
+        Stack s1 = new Stack();
+        Iterator it1 = new Iterator(list1.getHead());
+        while (it1.hasNext()) {
+            s1.push(it1.next());
+        }
+
+        Stack s2 = new Stack();
+        Iterator it2 = new Iterator(list2.getHead());
+        while (it2.hasNext()) {
+            s2.push(it2.next());
+        }
+
+        // Stack carry = new Stack();
+        int carry = 0;
+
+        while (!s1.isEmpty() && !s2.isEmpty()) {
+            int sum = 0;
+            int dig1 = Character.getNumericValue(s1.pop());
+            int dig2 = Character.getNumericValue(s2.pop());
+            if (carry == 0) {
+                sum = dig1 + dig2;
+            } else if (carry == 1) {
+                sum = dig1 + dig2 + carry;
+            }
+            if (sum > 9) {
+                carry = 1;
+            }
+
+            int toAdd = sum % 10;
+            char addFin = (char)(toAdd + '0');
+
+            res.add(addFin);
+        }
         return res;
     }
 }

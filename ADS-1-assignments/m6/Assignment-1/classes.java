@@ -62,4 +62,32 @@ class LinkedList {
 			temp = temp.next;
 		}
 	}
+
+	public void setHead() {
+		head = head.next;
+	}
+
+}
+
+class Stack {
+	LinkedList listInp;
+
+	public Stack() {
+		listInp = new LinkedList();
+	}
+
+	public void push(char item) {
+		listInp.add(item);
+	}
+
+	public char pop() {
+		char out = listInp.getData(listInp.getHead());
+		listInp.setHead();
+		return out;
+	}
+
+	public boolean isEmpty() {
+		return listInp.isEmpty();
+	}
+
 }
