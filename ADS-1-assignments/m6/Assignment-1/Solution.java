@@ -13,7 +13,7 @@ class AddLargeNumbers {
         String out = "";
         Node temp = list.getHead();
         while (!list.isEmpty()) {
-            out += temp.data;
+            out += list.getData(temp);
             temp = temp.next;
         }
         return out;

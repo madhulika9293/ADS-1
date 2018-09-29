@@ -28,4 +28,8 @@ class LinkedList {
 	public Node getHead() {
 		return head;
 	}
+
+	public char getData(Node node) {
+		return node.data;
+	}
 }
