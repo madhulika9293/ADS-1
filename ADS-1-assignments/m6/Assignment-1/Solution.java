@@ -59,49 +59,55 @@ class AddLargeNumbers {
             int toAdd = sum % 10;
             char addFin = (char) (toAdd + '0');
 
+            if (carry == 1) {
+                char carrAdd = (char) (carry + '0');
+                res.add(carrAdd);
+            }
+
             res.add(addFin);
         }
-        while (!s1.isEmpty()) {
-            int sum = 0;
-            int dig1 = Character.getNumericValue(s1.pop());
-            if (carry == 0) {
-                sum = dig1;
-            } else if (carry == 1) {
-                sum = dig1 + carry;
-            }
-            if (sum > 9) {
-                carry = 1;
-            }
-
-            int toAdd = sum % 10;
-            char addFin = (char) (toAdd + '0');
-
-            res.add(addFin);
-
-        }
-        while (!s2.isEmpty()) {
-            int sum = 0;
-            int dig2 = Character.getNumericValue(s2.pop());
-            if (carry == 0) {
-                sum = dig2;
-            } else if (carry == 1) {
-                sum = dig2 + carry;
-            }
-            if (sum > 9) {
-                carry = 1;
-            }
-
-            int toAdd = sum % 10;
-            char addFin = (char) (toAdd + '0');
-
-            res.add(addFin);
-
+        if (s1.isEmpty() && s2.isEmpty() && carry == 1) {
+            char carrAdd = (char) (carry + '0');
+            res.add(carrAdd);
         }
 
-        // if (carry == 1) {
-        //     char carrAdd = (char) (carry + '0');
-        //     res.add(carrAdd);
+        // while (!s1.isEmpty()) {
+        //     int sum = 0;
+        //     int dig1 = Character.getNumericValue(s1.pop());
+        //     if (carry == 0) {
+        //         sum = dig1;
+        //     } else if (carry == 1) {
+        //         sum = dig1 + carry;
+        //     }
+        //     if (sum > 9) {
+        //         carry = 1;
+        //     }
+
+        //     int toAdd = sum % 10;
+        //     char addFin = (char) (toAdd + '0');
+
+        //     res.add(addFin);
+
         // }
+        // while (!s2.isEmpty()) {
+        //     int sum = 0;
+        //     int dig2 = Character.getNumericValue(s2.pop());
+        //     if (carry == 0) {
+        //         sum = dig2;
+        //     } else if (carry == 1) {
+        //         sum = dig2 + carry;
+        //     }
+        //     if (sum > 9) {
+        //         carry = 1;
+        //     }
+
+        //     int toAdd = sum % 10;
+        //     char addFin = (char) (toAdd + '0');
+
+        //     res.add(addFin);
+
+        // }
+
         return res;
     }
 }
