@@ -20,7 +20,7 @@ class AddLargeNumbers {
             out += it.next();
         }
 
-        for (int i = out.length() - 1; i >= 0; i++) {
+        for (int i = out.length() - 1; i >= 0; i--) {
             outFin += out.charAt(i);
         }
         return outFin;
