@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class AddLargeNumbers {
 
-    public static LinkedList numberToDigits(String number) {
+    public static LinkedList numberToDigits(final String number) {
         LinkedList res = new LinkedList();
         for (int i = number.length() - 1; i >= 0; i--) {
             res.add(number.charAt(i));
@@ -12,7 +12,7 @@ class AddLargeNumbers {
         return res;
     }
 
-    public static String digitsToNumber(LinkedList list) {
+    public static String digitsToNumber(final LinkedList list) {
         String out = "";
         Iterator it = new Iterator(list.getHead());
         while (it.hasNext()) {
@@ -21,7 +21,8 @@ class AddLargeNumbers {
         return out;
     }
 
-    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+    public static LinkedList addLargeNumbers(final LinkedList list1,
+            final LinkedList list2) {
         LinkedList res = new LinkedList();
 
         // list1.print();
@@ -56,14 +57,51 @@ class AddLargeNumbers {
             }
 
             int toAdd = sum % 10;
-            char addFin = (char)(toAdd + '0');
+            char addFin = (char) (toAdd + '0');
 
             res.add(addFin);
         }
-        if (carry == 1) {
-            char carrAdd = (char)(carry + '0');
-            res.add(carrAdd);
+        while (!s1.isEmpty()) {
+            int sum = 0;
+            int dig1 = Character.getNumericValue(s1.pop());
+            if (carry == 0) {
+                sum = dig1;
+            } else if (carry == 1) {
+                sum = dig1 + carry;
+            }
+            if (sum > 9) {
+                carry = 1;
+            }
+
+            int toAdd = sum % 10;
+            char addFin = (char) (toAdd + '0');
+
+            res.add(addFin);
+
         }
+        while (!s2.isEmpty()) {
+            int sum = 0;
+            int dig2 = Character.getNumericValue(s2.pop());
+            if (carry == 0) {
+                sum = dig2;
+            } else if (carry == 1) {
+                sum = dig2 + carry;
+            }
+            if (sum > 9) {
+                carry = 1;
+            }
+
+            int toAdd = sum % 10;
+            char addFin = (char) (toAdd + '0');
+
+            res.add(addFin);
+
+        }
+
+        // if (carry == 1) {
+        //     char carrAdd = (char) (carry + '0');
+        //     res.add(carrAdd);
+        // }
         return res;
     }
 }
