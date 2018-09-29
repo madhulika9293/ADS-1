@@ -3,7 +3,7 @@ class AddLargeNumbers {
 
     public static LinkedList numberToDigits(String number) {
         LinkedList res = new LinkedList();
-        for (int i = 0; i < number.length(); i++) {
+        for (int i = number.length()-1; i >=0; i--) {
             res.add(number.charAt(i));
             // System.out.println(number.charAt(i));
         }
@@ -20,20 +20,28 @@ class AddLargeNumbers {
             out += it.next();
         }
 
-        for (int i = out.length() - 1; i >= 0; i--) {
-            outFin += out.charAt(i);
-        }
-        return outFin;
+        // for (int i = out.length() - 1; i >= 0; i--) {
+        //     outFin += out.charAt(i);
+        // }
+        // return outFin;
+        return out;
     }
 
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
         LinkedList res = new LinkedList();
+
+        // list1.print();
+        // list2.print();
 
         Stack s1 = new Stack();
         Iterator it1 = new Iterator(list1.getHead());
         while (it1.hasNext()) {
             s1.push(it1.next());
         }
+
+        // while (!s1.isEmpty()) {
+        //     System.out.println(s1.pop());
+        // }
 
         Stack s2 = new Stack();
         Iterator it2 = new Iterator(list2.getHead());
