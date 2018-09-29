@@ -14,16 +14,10 @@ class AddLargeNumbers {
 
     public static String digitsToNumber(LinkedList list) {
         String out = "";
-        String outFin = "";
         Iterator it = new Iterator(list.getHead());
         while (it.hasNext()) {
             out += it.next();
         }
-
-        // for (int i = out.length() - 1; i >= 0; i--) {
-        //     outFin += out.charAt(i);
-        // }
-        // return outFin;
         return out;
     }
 
@@ -38,10 +32,6 @@ class AddLargeNumbers {
         while (it1.hasNext()) {
             s1.push(it1.next());
         }
-
-        // while (!s1.isEmpty()) {
-        //     System.out.println(s1.pop());
-        // }
 
         Stack s2 = new Stack();
         Iterator it2 = new Iterator(list2.getHead());
