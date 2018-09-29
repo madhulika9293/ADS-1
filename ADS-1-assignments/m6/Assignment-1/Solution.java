@@ -58,7 +58,7 @@ final class AddLargeNumbers {
 
         final int nine = 9;
         final int ten = 10;
-        
+
         // list1.print();
         // list2.print();
 
@@ -145,7 +145,7 @@ final class AddLargeNumbers {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -173,7 +173,8 @@ public class Solution {
         case "addLargeNumbers":
             LinkedList pDigits1 = AddLargeNumbers.numberToDigits(p);
             LinkedList qDigits1 = AddLargeNumbers.numberToDigits(q);
-            LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits1, qDigits1);
+            LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits1,
+                                qDigits1);
             System.out.println(AddLargeNumbers.digitsToNumber(result));
             break;
         default:
