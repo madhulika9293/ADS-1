@@ -87,6 +87,8 @@ final class AddLargeNumbers {
             }
             if (sum > nine) {
                 carry = 1;
+            } else {
+                carry = 0;
             }
 
             int toAdd = sum % ten;
