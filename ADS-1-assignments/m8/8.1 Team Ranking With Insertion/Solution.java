@@ -1,12 +1,25 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Class for Solution.
+ */
 public final class Solution {
 
+	/**
+	 * Constructs the object.
+	 */
 	private Solution() {
 		// unused constructor
 	}
 
+	/**
+	 * Prints out the leader board of given cricket teams.
+	 *
+	 * @param      tms   The tms
+	 * @param      sz    The size
+	 *
+	 * @return     String representation of the leader board.
+	 */
 	public static String leaderBoard(final Team[] tms, final int sz) {
 		InsertionSortTeam.sort(tms, sz);
 
@@ -19,11 +32,19 @@ public final class Solution {
 		return out;
 	}
 
-	public static void main(String[] args) {
+	/**
+	 * Main method.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 
 		Scanner scan = new Scanner(System.in);
 
-		Team[] teams = new Team[10];
+		final int three = 3;
+		final int ten = 10;
+
+		Team[] teams = new Team[ten];
 		int size = 0;
 
 		while (scan.hasNext()) {
@@ -31,7 +52,7 @@ public final class Solution {
 			Team temp = new Team(inp[0],
 			                     Integer.parseInt(inp[1]),
 			                     Integer.parseInt(inp[2]),
-			                     Integer.parseInt(inp[3]));
+			                     Integer.parseInt(inp[three]));
 			teams[size] = temp;
 			size += 1;
 		}
