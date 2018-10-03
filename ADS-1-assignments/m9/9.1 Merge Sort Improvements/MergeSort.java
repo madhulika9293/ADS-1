@@ -40,7 +40,7 @@ public class MergeSort {
   // top down sort
   public static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
 
-    if (hi <= (lo + cutoff - 1)) {
+    if (hi <= (lo + cutoff)) {
       InsertionSort.sort(a, lo, hi);
       System.out.println("Insertion sort method invoked...");
     } else {
