@@ -18,10 +18,6 @@ public class MergeSort {
   public static void merge(Comparable[] a, Comparable[] aux,
                            int lo, int mid, int hi) {
 
-    // for (int i = lo; i <= hi; i++) {
-    //   aux[i] = a[i];
-    // }
-
     int i = lo;
     int j = mid + 1;
     for (int k = lo; k <= hi; k++) {
@@ -41,33 +37,31 @@ public class MergeSort {
   public static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
 
     if (hi <= (lo + cutoff)) {
-      InsertionSort.sort(a, lo, hi);
+      InsertionSort.sort(aux, lo, hi);
       System.out.println("Insertion sort method invoked...");
+      return;
     } else {
 
       int mid = lo + (hi - lo) / 2;
-
       sort(aux, a, lo, mid);
       sort(aux, a, mid + 1, hi);
 
-      // isSorted(aux, lo, mid) && isSorted(aux, mid + 1, hi)
-
-      if (isSorted(aux, lo, mid) && isSorted(aux, mid + 1, hi)
-          && ! less(aux[mid + 1], aux[mid])) {
+      if (!less(a[mid + 1], a[mid])) {
+        for (int i = lo; i <= hi; i++) {
+          aux[i] = a[i];
+        }
+        // System.arraycopy(a, lo, aux, lo, hi - lo + 1);
         System.out.println(
           "Array is already sorted. So, skipped the call to merge...");
-        // return;
+        return;
       }
-      merge(aux, a, lo, mid, hi);
+      merge(a, aux, lo, mid, hi);
     }
   }
 
   // top down sort
   public static void sort(Comparable[] a) {
-    Comparable[] aux = new Comparable[a.length];
-    for (int i = 0; i < a.length; i++) {
-      aux[i] = a[i];
-    }
+    Comparable[] aux = a.clone();
     sort(a, aux, 0, a.length - 1);
   }
 
