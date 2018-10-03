@@ -32,22 +32,21 @@ public class MergeSort {
 
   // top down sort
   public static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+
     if (hi <= lo + cutoff - 1) {
       InsertionSort.sort(a, lo, hi);
       System.out.println("Insertion sort method invoked...");
     } else {
-      // if (hi <= lo) {
-      //   return;
-      // }
+
       int mid = lo + (hi - lo) / 2;
 
       sort(aux, a, lo, mid);
       sort(aux, a, mid + 1, hi);
 
-      if (less(a[mid], a[mid + 1])) {
-        System.out.println("Array is already sorted. So, skipped the call to merge...");
-        return;
-      }
+      // if (!less(a[mid + 1], a[mid])) {
+      //   System.out.println("Array is already sorted. So, skipped the call to merge...");
+      //   return;
+      // }
       merge(aux, a, lo, mid, hi);
     }
   }

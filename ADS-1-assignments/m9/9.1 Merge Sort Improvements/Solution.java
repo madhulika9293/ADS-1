@@ -21,8 +21,8 @@ public class Solution {
 		while (scan.hasNext()) {
 			String[] inputs = scan.nextLine().split(",");
 			// Integer[] inpInt = new Integer[inputs.length];
-				MergeSort.sort(inputs);
-				System.out.println(Arrays.toString(inputs));
+			MergeSort.sort(inputs);
+			System.out.println(Arrays.toString(inputs) + "\n");
 		}
 		scan.close();
 	}

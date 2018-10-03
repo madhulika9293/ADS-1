@@ -25,16 +25,13 @@ public class InsertionSort {
 					swap(a, j, j - 1);
 				}
 			}
-			// System.out.println("Step " + (i + 1) + ": "
-			// + Arrays.toString(a).replace(",", "").replace("[", "").replace("]", "") + "\n");
-			// System.out.println(Arrays.toString(a));
 		}
 	}
 
 	// public static void main(String[] args) {
-	// 	Integer[] arr = {3, 6, 4, 2, 1, 0};
+	// 	String[] arr = {"22", "96", "23", "433", "33", "307", "162", "221"};
 	// 	// String[] arr = {"E", "A", "S", "Y", "Q", "U", "E", "S", "T", "I", "O", "N"};
-	// 	sort(arr, 1, 5);
+	// 	sort(arr, 0, 7);
 	// 	System.out.println(Arrays.toString(arr));
 	// }
 }
