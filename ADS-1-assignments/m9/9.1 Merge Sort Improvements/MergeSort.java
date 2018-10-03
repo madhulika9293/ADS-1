@@ -2,10 +2,17 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-  static int cutoff = 6;
+  static int cutoff = 7;
 
   public static boolean less(Comparable x, Comparable y) {
     return x.compareTo(y) < 0;
+  }
+
+  public static boolean isSorted(Comparable[] a, int l, int h) {
+    for (int i = l + 1; i <= h; i++) {
+      if (less(a[i], a[i - 1])) return false;
+    }
+    return true;
   }
 
   public static void merge(Comparable[] a, Comparable[] aux,
@@ -33,7 +40,7 @@ public class MergeSort {
   // top down sort
   public static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
 
-    if (hi <= lo + cutoff - 1) {
+    if (hi <= (lo + cutoff - 1)) {
       InsertionSort.sort(a, lo, hi);
       System.out.println("Insertion sort method invoked...");
     } else {
@@ -43,9 +50,13 @@ public class MergeSort {
       sort(aux, a, lo, mid);
       sort(aux, a, mid + 1, hi);
 
-      if (!less(a[mid + 1], a[mid])) {
-        System.out.println("Array is already sorted. So, skipped the call to merge...");
-        return;
+      // isSorted(aux, lo, mid) && isSorted(aux, mid + 1, hi)
+
+      if (isSorted(aux, lo, mid) && isSorted(aux, mid + 1, hi)
+          && ! less(aux[mid + 1], aux[mid])) {
+        System.out.println(
+          "Array is already sorted. So, skipped the call to merge...");
+        // return;
       }
       merge(aux, a, lo, mid, hi);
     }
