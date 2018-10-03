@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-  static int cutoff = 7;
+  static int cutoff = 6;
 
   public static boolean less(Comparable x, Comparable y) {
     return x.compareTo(y) < 0;
@@ -43,10 +43,10 @@ public class MergeSort {
       sort(aux, a, lo, mid);
       sort(aux, a, mid + 1, hi);
 
-      // if (!less(a[mid + 1], a[mid])) {
-      //   System.out.println("Array is already sorted. So, skipped the call to merge...");
-      //   return;
-      // }
+      if (!less(a[mid + 1], a[mid])) {
+        System.out.println("Array is already sorted. So, skipped the call to merge...");
+        return;
+      }
       merge(aux, a, lo, mid, hi);
     }
   }
