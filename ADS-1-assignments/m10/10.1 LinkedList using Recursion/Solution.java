@@ -15,7 +15,7 @@ public final class Solution {
    *
    * @param      args  The arguments
    */
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     Scanner scan = new Scanner(System.in);
     LinkedList<Integer> list = new LinkedList<>();
     int size = 0;
@@ -24,8 +24,9 @@ public final class Solution {
       String[] tokens = scan.nextLine().split(" ");
       switch (tokens[0]) {
       case "insertAt":
-        if (!list.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]))) {
-          size ++;
+        if (!list.insertAt(Integer.parseInt(tokens[1]),
+                           Integer.parseInt(tokens[2]))) {
+          size++;
           System.out.println(list.print());
         }
         break;

@@ -35,7 +35,7 @@ class LinkedList<E> {
 
 	/**
 	 * Inserts an element into a list.
-	 * 
+	 *
 	 * Complexity : N
 	 *
 	 * @param      index  The index
@@ -57,7 +57,7 @@ class LinkedList<E> {
 	 * Helper code for inserting an element.
 	 *
 	 * Complexity : N
-	 * 
+	 *
 	 * @param      head  The head
 	 * @param      cnt   The count
 	 * @param      ele   The element
@@ -79,7 +79,7 @@ class LinkedList<E> {
 
 	/**
 	 * Reverse function helper.
-	 * 
+	 *
 	 * Complexity : N
 	 *
 	 * @param      head  The head
