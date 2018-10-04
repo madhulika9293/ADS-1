@@ -26,7 +26,7 @@ public final class Solution {
       case "insertAt":
         if (!list.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]))) {
           size ++;
-          list.print();
+          System.out.println(list.print());
         }
         break;
       case "reverse":
@@ -35,7 +35,7 @@ public final class Solution {
           break;
         }
         list.reverse();
-        list.print();
+        System.out.println(list.print());
         break;
       default:
         break;
