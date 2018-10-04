@@ -35,6 +35,7 @@ public final class Solution {
           break;
         }
         list.reverse();
+        list.print();
         break;
       default:
         break;
