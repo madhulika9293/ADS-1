@@ -41,7 +41,7 @@ public final class Solution {
 		int totSz = stus.length;
 
 		for (int i = filled; bc > 0 && i < totSz; i++) {
-			if (filled < unres + bc && stus[i].resCat.equals("BC")
+			if (filled < unres + bc && stus[i].getResCat().equals("BC")
 			        && filled <= totV) {
 				seats[filled] = stus[i];
 				filled += 1;
@@ -54,7 +54,7 @@ public final class Solution {
 		// System.out.println(Arrays.toString(seats));
 
 		for (int i = unres; st > 0 && i < totSz; i++) {
-			if (stus[i].resCat.equals("ST")
+			if (stus[i].getResCat().equals("ST")
 			        && filled <= totV) {
 				seats[filled] = stus[i];
 				filled += 1;
@@ -66,7 +66,7 @@ public final class Solution {
 		// System.out.println(Arrays.toString(seats));
 
 		for (int i = unres; sc > 0 && i < totSz; i++) {
-			if (stus[i].resCat.equals("SC")
+			if (stus[i].getResCat().equals("SC")
 			        && filled <= totV) {
 				seats[filled] = stus[i];
 				filled += 1;
