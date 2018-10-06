@@ -77,7 +77,9 @@ class Student implements Comparable<Student> {
    * @return     1, 0 or -1 depending on comparison.
    */
   public int compareTo(final Student other) {
-    if (this.totMarks > other.totMarks) { return 1;}
+    if (this.totMarks > other.totMarks) {
+      return 1;
+    }
     if (this.totMarks < other.totMarks) {return -1; }
     if (this.sub3Marks > other.sub3Marks) {return 1; }
     if (this.sub3Marks < other.sub3Marks) {return -1; }
