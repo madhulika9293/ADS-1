@@ -80,17 +80,40 @@ class Student implements Comparable<Student> {
     if (this.totMarks > other.totMarks) {
       return 1;
     }
-    if (this.totMarks < other.totMarks) {return -1; }
-    if (this.sub3Marks > other.sub3Marks) {return 1; }
-    if (this.sub3Marks < other.sub3Marks) {return -1; }
-    if (this.sub2Marks > other.sub2Marks) {return 1; }
-    if (this.sub2Marks < other.sub2Marks) {return -1; }
-    if (this.dobYear > other.dobYear) {return 1; }
-    if (this.dobYear < other.dobYear) {return -1; }
-    if (this.dobMonth > other.dobMonth) {return 1; }
-    if (this.dobMonth < other.dobMonth) {return -1; }
-    if (this.dobDay > other.dobDay) {return 1; }
-    if (this.dobDay < other.dobDay) {return -1; }
+    if (this.totMarks < other.totMarks) {
+      return -1;
+    }
+    if (this.sub3Marks > other.sub3Marks) {
+      return 1;
+    }
+    if (this.sub3Marks < other.sub3Marks) {
+      return -1;
+    }
+    if (this.sub2Marks > other.sub2Marks) {
+      return 1;
+    }
+
+    if (this.sub2Marks < other.sub2Marks) {
+      return -1;
+    }
+    if (this.dobYear > other.dobYear) {
+      return 1;
+    }
+    if (this.dobYear < other.dobYear) {
+      return -1;
+    }
+    if (this.dobMonth > other.dobMonth) {
+      return 1;
+    }
+    if (this.dobMonth < other.dobMonth) {
+      return -1;
+    }
+    if (this.dobDay > other.dobDay) {
+      return 1;
+    }
+    if (this.dobDay < other.dobDay) {
+      return -1;
+    }
     return 0;
   }
 
