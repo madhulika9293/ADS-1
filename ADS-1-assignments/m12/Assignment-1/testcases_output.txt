@@ -62,7 +62,7 @@ tanvi,90,BC
 Aditya,80,ST
 priya,72,SC
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 divya,99,ST
 Ishita,99,Open
@@ -141,7 +141,7 @@ Deepak,98,Open
 Ira,93,ST
 tanvi,90,BC
 Raj,87,BC
-Tanya,66,BC
+Aditya,80,ST
 priya,72,SC
 ----------------------------------------
 ########## Testcase 2: Failed ##########
@@ -211,7 +211,7 @@ divya,99,Open
 tanvi,90,ST
 Aditya,80,Open
 Tanya,66,BC
-Abhishek,60,BC
+priya,76,SC
 null
 ----------------------------------------
 ########## Testcase 4: Failed ##########
