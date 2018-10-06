@@ -14,15 +14,18 @@ public final class Solution {
 
 	public static void add(final Student[] arr,
 	                       final Student[] toArr,
-	                       final int insert, final int n) {
+	                       final int insert, final int n,
+	                       final int strt) {
 		int check = 0;
 		int at = insert;
-		for (int j = insert - 1; at < toArr.length && check <= n; j++) {
+		for (int j = strt; j < arr.length; j++) {
 			if (!Arrays.asList(toArr).contains(arr[j])) {
-			toArr[at] = arr[j];
-			at += 1;
-			check += 1;
+				toArr[at] = arr[j];
+				at += 1;
+				check += 1;
 			}
+
+			if (check == n) break;
 		}
 	}
 
@@ -45,31 +48,37 @@ public final class Solution {
 			}
 		}
 
-		// System.out.println(filled);
+		int tBc = filled - unres;
 
-		for (int i = filled; st > 0 && i < totSz; i++) {
-			if (filled < unres + bc + st && stus[i].resCat.equals("ST")
+		// System.out.println(filled);
+		// System.out.println(Arrays.toString(seats));
+
+		for (int i = unres; st > 0 && i < totSz; i++) {
+			if (stus[i].resCat.equals("ST")
 			        && filled <= totV) {
 				seats[filled] = stus[i];
 				filled += 1;
-
+				if (filled == unres + tBc + st) break;
 			}
 		}
-		// System.out.println(filled);
 
-		for (int i = filled; sc > 0 && i < totSz; i++) {
-			if (filled < unres + bc + st + sc && stus[i].resCat.equals("SC")
+		// System.out.println(filled);
+		// System.out.println(Arrays.toString(seats));
+
+		for (int i = unres; sc > 0 && i < totSz; i++) {
+			if (stus[i].resCat.equals("SC")
 			        && filled <= totV) {
 				seats[filled] = stus[i];
 				filled += 1;
+				if (filled == unres + tBc + st + sc) break;
 			}
 		}
 
 		if (filled < totV) {
 			int toBeFilled = totV - filled;
-			add(stus, seats, filled, toBeFilled);
+			add(stus, seats, filled, toBeFilled, unres);
 		}
-
+		// System.out.println(Arrays.toString(seats));
 		MergeSort.sort(seats);
 		return seats;
 	}
