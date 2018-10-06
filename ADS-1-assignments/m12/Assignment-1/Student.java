@@ -93,5 +93,6 @@ class Student implements Comparable<Student> {
 	public String toString() {
 		return name + "," + totMarks + "," + resCat;
 	}
+
 }
 

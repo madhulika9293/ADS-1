@@ -12,6 +12,20 @@ public final class Solution {
 		// unused constructor
 	}
 
+	public static void add(final Student[] arr,
+	                       final Student[] toArr,
+	                       final int insert, final int n) {
+		int check = 0;
+		int at = insert;
+		for (int j = insert - 1; at < toArr.length && check <= n; j++) {
+			if (!Arrays.asList(toArr).contains(arr[j])) {
+			toArr[at] = arr[j];
+			at += 1;
+			check += 1;
+			}
+		}
+	}
+
 	public static Student[] seatsFilled (final Student[] stus,
 	                                     final int totV,
 	                                     final int unres,
@@ -51,6 +65,12 @@ public final class Solution {
 			}
 		}
 
+		if (filled < totV) {
+			int toBeFilled = totV - filled;
+			add(stus, seats, filled, toBeFilled);
+		}
+
+		MergeSort.sort(seats);
 		return seats;
 	}
 	/**
