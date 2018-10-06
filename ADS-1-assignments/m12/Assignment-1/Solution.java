@@ -20,26 +20,34 @@ public final class Solution {
 
 		Student[] seats = new Student[totV];
 		for (int i = 0; i < unres; i++) seats[i] = stus[i];
-		int sz = unres;
+		int filled = unres;
+		int totSz = stus.length;
 
-		for (int i = sz; i < totV - 1; i++) {
-			// System.out.println(stus[i].resCat);
-			if (bc > 0 && sz <= unres + bc && stus[i].resCat.equals("BC")) {
-				seats[sz++] = stus[i];
-				// System.out.println(Arrays.toString(seats));
+		for (int i = filled; bc > 0 && i < totSz; i++) {
+			if (filled <= unres + bc && stus[i].resCat.equals("BC")
+			        && filled <= totV) {
+				seats[filled] = stus[i];
+				filled += 1;
 			}
 		}
 
-		for (int i = sz; i < totV - 1; i++) {
-			System.out.println(st > 0 && sz <= unres + bc + st && stus[i].resCat.equals("ST"));
-			if (st > 0 && sz <= unres + bc + st && stus[i].resCat.equals("ST")) {
-				seats[sz++] = stus[i];
+		// System.out.println(filled);
+
+		for (int i = filled; st > 0 && i < totSz; i++) {
+			if (filled < unres + bc + st && stus[i].resCat.equals("ST")
+			        && filled <= totV) {
+				seats[filled] = stus[i];
+				filled += 1;
+
 			}
 		}
+		// System.out.println(filled);
 
-		for (int i = sz; i < totV - 1; i++) {
-			if (sc > 0 && sz <= unres + bc + st + sc && stus[i].resCat.equals("SC")) {
-				seats[sz++] = stus[i];
+		for (int i = filled; sc > 0 && i < totSz; i++) {
+			if (filled < unres + bc + st + sc && stus[i].resCat.equals("SC")
+			        && filled <= totV) {
+				seats[filled] = stus[i];
+				filled += 1;
 			}
 		}
 
