@@ -76,19 +76,19 @@ class Student implements Comparable<Student> {
    *
    * @return     1, 0 or -1 depending on comparison.
    */
-  public int compareTo (Student other) {
-    if (this.totMarks > other.totMarks) return 1;
-    if (this.totMarks < other.totMarks) return -1;
-    if (this.sub3Marks > other.sub3Marks) return 1;
-    if (this.sub3Marks < other.sub3Marks) return -1;
-    if (this.sub2Marks > other.sub2Marks) return 1;
-    if (this.sub2Marks < other.sub2Marks) return -1;
-    if (this.dobYear > other.dobYear) return 1;
-    if (this.dobYear < other.dobYear) return -1;
-    if (this.dobMonth > other.dobMonth) return 1;
-    if (this.dobMonth < other.dobMonth) return -1;
-    if (this.dobDay > other.dobDay) return 1;
-    if (this.dobDay < other.dobDay) return -1;
+  public int compareTo(final Student other) {
+    if (this.totMarks > other.totMarks) { return 1;}
+    if (this.totMarks < other.totMarks) {return -1; }
+    if (this.sub3Marks > other.sub3Marks) {return 1; }
+    if (this.sub3Marks < other.sub3Marks) {return -1; }
+    if (this.sub2Marks > other.sub2Marks) {return 1; }
+    if (this.sub2Marks < other.sub2Marks) {return -1; }
+    if (this.dobYear > other.dobYear) {return 1; }
+    if (this.dobYear < other.dobYear) {return -1; }
+    if (this.dobMonth > other.dobMonth) {return 1; }
+    if (this.dobMonth < other.dobMonth) {return -1; }
+    if (this.dobDay > other.dobDay) {return 1; }
+    if (this.dobDay < other.dobDay) {return -1; }
     return 0;
   }
 
@@ -101,6 +101,11 @@ class Student implements Comparable<Student> {
     return this.name + "," + this.totMarks + "," + this.resCat;
   }
 
+  /**
+   * Gets the category of the student.
+   *
+   * @return     category.
+   */
   public String getResCat() {
     return resCat;
   }
