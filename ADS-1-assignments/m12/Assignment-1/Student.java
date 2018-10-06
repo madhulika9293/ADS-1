@@ -51,9 +51,10 @@ class Student implements Comparable<Student> {
 		String[] inp = input.split(",");
 		name = inp[0];
 		dob = inp[1];
-		dobYear = Integer.parseInt(dob.substring(6,9));
-		dobMonth = Integer.parseInt(dob.substring(3,4));
-		dobDay = Integer.parseInt(dob.substring(0,1));
+		dobYear = Integer.parseInt(dob.substring(6, 10));
+		dobMonth = Integer.parseInt(dob.substring(3, 5));
+		// System.out.println(dobMonth);
+		dobDay = Integer.parseInt(dob.substring(0, 2));
 		sub1Marks = Integer.parseInt(inp[2]);
 		sub2Marks = Integer.parseInt(inp[3]);
 		sub3Marks = Integer.parseInt(inp[4]);
