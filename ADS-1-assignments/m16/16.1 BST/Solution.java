@@ -1,24 +1,64 @@
 import java.util.Scanner;
-
+/**
+ * Class for binary search tree.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
 class BST<Key extends Comparable<Key>, Value> {
+	/**
+	 * Class for node.
+	 */
 	private class Node {
+		/**
+		 * Key variable.
+		 */
 		Key key;
+		/**
+		 * Value variable.
+		 */
 		Value value;
+		/**
+		 * Left node address.
+		 */
 		Node left;
+		/**
+		 * Right node address.
+		 */
 		Node right;
-
+		/**
+		 * Constructs the object.
+		 *
+		 * @param      key    The key
+		 * @param      value  The value
+		 */
 		Node(Key key, Value value) {
 			this.key = key;
 			this.value = value;
 		}
 	}
-
+	/**
+	 * Root node class variable.
+	 */
 	private Node root;
-
+	/**
+	 * Puts a value in the tree.
+	 *
+	 * @param      key    The key
+	 * @param      value  The value
+	 */
 	public void put(Key key, Value value) {
 		root = put(root, key, value);
 	}
-
+	/**
+	 * Puts a value in the tree.
+	 *
+	 * @param      root   The root
+	 * @param      key    The key
+	 * @param      value  The value
+	 *
+	 * @return     Root node.
+	 */
 	private Node put(Node root, Key key, Value value) {
 		if (root == null) {
 			return new Node(key, value);
@@ -33,11 +73,25 @@ class BST<Key extends Comparable<Key>, Value> {
 		}
 		return root;
 	}
-
+	/**
+	 * Get the value of a key in the tree.
+	 *
+	 * @param      key   The key
+	 *
+	 * @return     Value.
+	 */
 	public Value get(Key key) {
 		return get(root, key);
 	}
 
+	/**
+	 * Gets the value of a key in the tree.
+	 *
+	 * @param      root  The root
+	 * @param      key   The key
+	 *
+	 * @return     Value.
+	 */
 	public Value get(Node root, Key key) {
 		if (root == null) {
 			return null;
@@ -81,6 +135,8 @@ public final class Solution {
 			case "get":
 				String out = bst.get(key);
 				System.out.println(out);
+				break;
+			default:
 				break;
 			}
 		}
