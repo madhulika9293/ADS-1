@@ -77,9 +77,11 @@ public final class Solution {
 			switch (inputs[0]) {
 			case "put":
 				bst.put(key, inputs[4]);
+				break;
 			case "get":
 				String out = bst.get(key);
 				System.out.println(out);
+				break;
 			}
 		}
 	}
