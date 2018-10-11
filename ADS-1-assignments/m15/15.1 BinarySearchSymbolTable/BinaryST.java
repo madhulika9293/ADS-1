@@ -1,12 +1,11 @@
 import java.util.Arrays;
-import java.lang.Comparable;
 /**
  * Class for binary st.
  *
- * @param      <key>    The key
- * @param      <value>  The value
+ * @param      <Key>    The key
+ * @param      <Value>  The value
  */
-public class BinaryST<Key extends Comparable<Key>, Value> {
+public final class BinaryST<Key extends Comparable<Key>, Value> {
     /**
      * Stores the keys.
      */
@@ -37,7 +36,7 @@ public class BinaryST<Key extends Comparable<Key>, Value> {
         values = Arrays.copyOf(values, cap);
     }
     /**
-     * Adds the key and allots to the value
+     * Adds the key and allots to the value.
      * Complexity N
      * @param      k     { parameter_description }
      * @param      v     { parameter_description }
@@ -85,6 +84,13 @@ public class BinaryST<Key extends Comparable<Key>, Value> {
         }
         return lo;
     }
+    /**
+     * Gets the value.
+     *
+     * @param      a     Key.
+     *
+     * @return     Value.
+     */
     public Value get(final Key a) {
         if (isEmpty()) {
             return null;
@@ -139,6 +145,7 @@ public class BinaryST<Key extends Comparable<Key>, Value> {
      * @param      delkey  The delkey
      */
     public void delete(final Key delkey) {
+        final int four = 4;
         if (isEmpty()) {
             return;
         }
@@ -153,7 +160,7 @@ public class BinaryST<Key extends Comparable<Key>, Value> {
         size--;
         keys[size] = null;
         values[size] = null;
-        if (size > 0 && size == keys.length / 4) {
+        if (size > 0 && size == keys.length / four) {
             resize(keys.length / 2);
         }
     }
