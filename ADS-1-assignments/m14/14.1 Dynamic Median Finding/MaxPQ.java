@@ -5,9 +5,18 @@ import java.util.Comparator;
  * @param      <Key>  The key
  */
 public class MaxPQ<Key> {
-    private Key[] pq;                    // store items at indices 1 to n
-    private int n;                       // number of items on priority queue
-    private Comparator<Key> comparator;  // optional comparator
+    /**
+     * stores items from 1 to n.
+     */
+    private Key[] pq;
+    /**
+     * Number of items on priority queue.
+     */
+    private int n;
+    /**
+     * Comparator variable.
+     */
+    private Comparator<Key> comparator;
 
     /**
      * Initializes an empty priority queue with the given initial capacity.
@@ -54,7 +63,11 @@ public class MaxPQ<Key> {
         return pq[1];
     }
 
-    // helper function to double the size of the heap array
+    /**
+     * Helper function to double the size of the heap array.
+     *
+     * @param      capacity  The capacity
+     */
     private void resize(final int capacity) {
         Key[] temp = (Key[]) new Object[capacity];
         for (int i = 1; i <= n; i++) {
@@ -69,7 +82,7 @@ public class MaxPQ<Key> {
      *
      * @param  x the new key to add to this priority queue
      */
-    public void insert(Key x) {
+    public void insert(final Key x) {
         if (n == pq.length - 1) {
             resize(2 * pq.length);
         }
@@ -78,16 +91,19 @@ public class MaxPQ<Key> {
     }
 
     /**
-     * Removes and returns a largest key on this priority queue.
+     * Removes and returns a largest key
+     * on this priority queue.
      *
      * @return a largest key on this priority queue
      */
     public Key delMax() {
+        final int four = 4;
         Key max = pq[1];
         exch(1, n--);
         sink(1);
-        pq[n + 1] = null;   // to avoid loiterig and help with garbage collection
-        if ((n > 0) && (n == (pq.length - 1) / 4)) {
+        pq[n + 1] = null;
+        // to avoid loiterig and help with garbage collection
+        if ((n > 0) && (n == (pq.length - 1) / four)) {
             resize(pq.length / 2);
         }
         return max;
@@ -96,9 +112,10 @@ public class MaxPQ<Key> {
     /**
     * Swim function.
     *
-    * @param      k     { parameter_description }
+    * @param      k1     { parameter_description }
     */
-    private void swim(int k) {
+    private void swim(final int k1) {
+        int k = k1;
         while (k > 1 && less(k / 2, k)) {
             exch(k, k / 2);
             k = k / 2;
@@ -107,9 +124,10 @@ public class MaxPQ<Key> {
     /**
      * Sink function.
      *
-     * @param      k     { parameter_description }
+     * @param      k1     { parameter_description }
      */
-    private void sink(int k) {
+    private void sink(final int k1) {
+        int k = k1;
         while (2 * k <= n) {
             int j = 2 * k;
             if (j < n && less(j, j + 1)) {

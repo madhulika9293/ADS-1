@@ -5,9 +5,18 @@ import java.util.Comparator;
  * @param      <Key>  The key
  */
 public class MinPQ<Key> {
-    private Key[] pq;                    // store items at indices 1 to n
-    private int n;                       // number of items on priority queue
-    private Comparator<Key> comparator;  // optional comparator
+    /**
+     * stores items from 1 to n.
+     */
+    private Key[] pq;
+    /**
+     * Number of items on priority queue.
+     */
+    private int n;
+    /**
+     * Comparator variable.
+     */
+    private Comparator<Key> comparator;
 
     /**
      * Initializes an empty priority queue with the given initial capacity.
@@ -83,11 +92,12 @@ public class MinPQ<Key> {
      * @return a smallest key on this priority queue
      */
     public Key delMin() {
+        final int four = 4;
         Key min = pq[1];
         exch(1, n--);
         sink(1);
         pq[n + 1] = null;
-        if ((n > 0) && (n == (pq.length - 1) / 4)) {
+        if ((n > 0) && (n == (pq.length - 1) / four)) {
             resize(pq.length / 2);
         }
         return min;
@@ -95,9 +105,10 @@ public class MinPQ<Key> {
     /**
     * Swim function.
     *
-    * @param      k     { parameter_description }
+    * @param      k1     { parameter_description }
     */
-    private void swim(int k) {
+    private void swim(final int k1) {
+        int k = k1;
         while (k > 1 && greater(k / 2, k)) {
             exch(k, k / 2);
             k = k / 2;
@@ -106,9 +117,10 @@ public class MinPQ<Key> {
     /**
      * Sink function.
      *
-     * @param      k     { parameter_description }
+     * @param      k1     { parameter_description }
      */
-    private void sink(int k) {
+    private void sink(final int k1) {
+        int k = k1;
         while (2 * k <= n) {
             int j = 2 * k;
             if (j < n && greater(j, j + 1)) {
@@ -140,9 +152,10 @@ public class MinPQ<Key> {
      * Exchange function.
      *
      * @param      i     { parameter_description }
-     * @param      j     { parameter_description }
+     * @param      j1     { parameter_description }
      */
-    private void exch(final int i, int j) {
+    private void exch(final int i, final int j1) {
+        int j = j1;
         Key swap = pq[i];
         pq[i] = pq[j];
         pq[j] = swap;
