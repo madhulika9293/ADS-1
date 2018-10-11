@@ -1,5 +1,4 @@
 Starting audit...
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:3: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:4: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:4:1: File contains tab characters (this is the first instance). [FileTabCharacter]
@@ -31,9 +30,8 @@ Starting audit...
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:41:26: Parameter root should be final. [FinalParameters]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:41:31: 'root' hides a field. [HiddenField]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:41:37: Parameter key should be final. [FinalParameters]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:76:61: '3' is a magic number. [MagicNumber]
+[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:76:69: '3' is a magic number. [MagicNumber]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:77: switch without "default" clause. [MissingSwitchDefault]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:77:23: 'switch' is not followed by whitespace. [WhitespaceAround]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:79:53: '4' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 36 errors.
+Checkstyle ends with 34 errors.

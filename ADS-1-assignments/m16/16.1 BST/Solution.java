@@ -71,14 +71,15 @@ public final class Solution {
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		BST<String, String> bst = new BST<String, String>();
-
-		String[] inputs = scan.nextLine().split(",");
-		String key = inputs[1] + inputs[2] + inputs[3];
-		switch(inputs[0]) {
+		while (scan.hasNext()) {
+			String[] inputs = scan.nextLine().split(",");
+			String key = inputs[1] + inputs[2] + inputs[3];
+			switch (inputs[0]) {
 			case "put":
 				bst.put(key, inputs[4]);
 			case "get":
 				System.out.println(bst.get(key));
+			}
 		}
 	}
 }
