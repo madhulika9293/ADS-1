@@ -32,9 +32,9 @@ class BST<Key extends Comparable<Key>, Value> {
      * @param      key    The key
      * @param      value  The value
      */
-    Node(Key key, Value value) {
-      this.key = key;
-      this.value = value;
+    Node(final Key key1, final Value value1) {
+      this.key = key1;
+      this.value = value1;
     }
   }
   /**
