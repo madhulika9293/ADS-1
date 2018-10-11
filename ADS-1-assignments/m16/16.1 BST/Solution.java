@@ -78,7 +78,8 @@ public final class Solution {
 			case "put":
 				bst.put(key, inputs[4]);
 			case "get":
-				System.out.println(bst.get(key));
+				String out = bst.get(key);
+				System.out.println(out);
 			}
 		}
 	}
