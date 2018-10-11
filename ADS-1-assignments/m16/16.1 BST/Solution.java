@@ -53,25 +53,25 @@ class BST<Key extends Comparable<Key>, Value> {
   /**
    * Puts a value in the tree.
    *
-   * @param      root   The root
+   * @param      root1   The root
    * @param      key    The key
    * @param      value  The value
    *
    * @return     Root node.
    */
-  private Node put(final Node root, final Key key, final Value value) {
-    if (root == null) {
+  private Node put(final Node root1, final Key key, final Value value) {
+    if (root1 == null) {
       return new Node(key, value);
     }
-    int comp = key.compareTo(root.key);
+    int comp = key.compareTo(root1.key);
     if (comp < 0) {
-      root.left = put(root.left, key, value);
+      root1.left = put(root1.left, key, value);
     } else if (comp > 0) {
-      root.right = put(root.right, key, value);
+      root1.right = put(root1.right, key, value);
     } else {
-      root.value = value;
+      root1.value = value;
     }
-    return root;
+    return root1;
   }
   /**
    * Get the value of a key in the tree.
@@ -87,22 +87,22 @@ class BST<Key extends Comparable<Key>, Value> {
   /**
    * Gets the value of a key in the tree.
    *
-   * @param      root  The root
+   * @param      root1  The root
    * @param      key   The key
    *
    * @return     Value.
    */
-  public Value get(final Node root, final Key key) {
-    if (root == null) {
+  public Value get(final Node root1, final Key key) {
+    if (root1 == null) {
       return null;
     }
-    int comp = key.compareTo(root.key);
+    int comp = key.compareTo(root1.key);
     if (comp < 0) {
-      return get(root.left, key);
+      return get(root1.left, key);
     } else if (comp > 0) {
-      return get(root.right, key);
+      return get(root1.right, key);
     } else {
-      return root.value;
+      return root1.value;
     }
   }
 }
@@ -124,13 +124,15 @@ public final class Solution {
    */
   public static void main(final String[] args) {
     Scanner scan = new Scanner(System.in);
+    final int three = 3;
+    final int four = 4;
     BST<String, String> bst = new BST<String, String>();
     while (scan.hasNext()) {
       String[] inputs = scan.nextLine().split(",");
-      String key = inputs[1] + inputs[2] + inputs[3];
+      String key = inputs[1] + inputs[2] + inputs[three];
       switch (inputs[0]) {
       case "put":
-        bst.put(key, inputs[4]);
+        bst.put(key, inputs[four]);
         break;
       case "get":
         String out = bst.get(key);
