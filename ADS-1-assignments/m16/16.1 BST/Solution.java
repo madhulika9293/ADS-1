@@ -25,9 +25,9 @@ class BST<Key extends Comparable<Key>, Value> {
 		}
 		int comp = key.compareTo(root.key);
 		if (comp < 0) {
-			root.left = put(root, key, value);
+			root.left = put(root.left, key, value);
 		} else if (comp > 0) {
-			root.right = put(root, key, value);
+			root.right = put(root.right, key, value);
 		} else {
 			root.value = value;
 		}
