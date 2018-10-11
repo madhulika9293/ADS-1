@@ -29,8 +29,8 @@ class BST<Key extends Comparable<Key>, Value> {
     /**
      * Constructs the object.
      *
-     * @param      key    The key
-     * @param      value  The value
+     * @param      key1    The key
+     * @param      value1  The value
      */
     Node(final Key key1, final Value value1) {
       this.key = key1;
@@ -47,7 +47,7 @@ class BST<Key extends Comparable<Key>, Value> {
    * @param      key    The key
    * @param      value  The value
    */
-  public void put(Key key, Value value) {
+  public void put(final Key key, final Value value) {
     root = put(root, key, value);
   }
   /**
@@ -59,7 +59,7 @@ class BST<Key extends Comparable<Key>, Value> {
    *
    * @return     Root node.
    */
-  private Node put(Node root, Key key, Value value) {
+  private Node put(final Node root, final Key key, final Value value) {
     if (root == null) {
       return new Node(key, value);
     }
@@ -80,7 +80,7 @@ class BST<Key extends Comparable<Key>, Value> {
    *
    * @return     Value.
    */
-  public Value get(Key key) {
+  public Value get(final Key key) {
     return get(root, key);
   }
 
@@ -92,7 +92,7 @@ class BST<Key extends Comparable<Key>, Value> {
    *
    * @return     Value.
    */
-  public Value get(Node root, Key key) {
+  public Value get(final Node root, final Key key) {
     if (root == null) {
       return null;
     }

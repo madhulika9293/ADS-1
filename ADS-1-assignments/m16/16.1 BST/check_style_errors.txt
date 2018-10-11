@@ -1,19 +1,7 @@
 Starting audit...
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:32:8: Unused @param tag for 'key'. [JavadocMethod]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:33:8: Unused @param tag for 'value'. [JavadocMethod]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:35:20: Expected @param tag for 'key1'. [JavadocMethod]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:35:38: Expected @param tag for 'value1'. [JavadocMethod]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:50:19: Parameter key should be final. [FinalParameters]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:50:28: Parameter value should be final. [FinalParameters]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:62:20: Parameter root should be final. [FinalParameters]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:62:25: 'root' hides a field. [HiddenField]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:62:31: Parameter key should be final. [FinalParameters]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:62:40: Parameter value should be final. [FinalParameters]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:83:20: Parameter key should be final. [FinalParameters]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:95:20: Parameter root should be final. [FinalParameters]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:95:25: 'root' hides a field. [HiddenField]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:95:31: Parameter key should be final. [FinalParameters]
+[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:62:31: 'root' hides a field. [HiddenField]
+[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:95:31: 'root' hides a field. [HiddenField]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:130:51: '3' is a magic number. [MagicNumber]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:133:29: '4' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 16 errors.
+Checkstyle ends with 4 errors.
