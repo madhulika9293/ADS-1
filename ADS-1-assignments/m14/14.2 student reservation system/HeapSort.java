@@ -29,8 +29,8 @@ public class HeapSort {
     private static void sink(Student[] pq, int k, int n) {
         while (2*k <= n) {
             int j = 2*k;
-            if (j < n && less(pq, j, j+1)) j++;
-            if (!less(pq, k, j)) break;
+            if (j < n && more(pq, j, j+1)) j++;
+            if (!more(pq, k, j)) break;
             exch(pq, k, j);
             k = j;
         }
@@ -40,8 +40,8 @@ public class HeapSort {
     * Helper functions for comparisons and swaps.
     * Indices are "off-by-one" to support 1-based indexing.
     ***************************************************************************/
-    private static boolean less(Student[] pq, int i, int j) {
-        return pq[i-1].compareTo(pq[j-1]) < 0;
+    private static boolean more(Student[] pq, int i, int j) {
+        return pq[i-1].compareTo(pq[j-1]) > 0;
     }
 
     private static void exch(Student[] pq, int i, int j) {
