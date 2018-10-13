@@ -1,4 +1,4 @@
 Starting audit...
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:8:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:96:3: Method length is 190 lines (max allowed is 150). [MethodLength]
 Audit done.
 Checkstyle ends with 1 errors.
