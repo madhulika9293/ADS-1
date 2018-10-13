@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.ArrayList;
 /**
  * Class for maximum pq.
  *
@@ -170,10 +171,11 @@ public class MaxPQ<Key> {
     /**
     * Prints the maximum 5 of the PQ.
     */
-    public void print5() {
+    public void print5(final ArrayList<Key> best) {
         for (int i = 1; i <= 5; i++) {
-            // System.out.println(pq[i]);
-            System.out.println(delMax());
+            Key temp = delMax();
+            System.out.println(temp);
+            best.add(temp);
         }
         System.out.print("\n");
     }

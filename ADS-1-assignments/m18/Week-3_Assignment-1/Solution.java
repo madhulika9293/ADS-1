@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * Class for stock.
@@ -96,6 +97,8 @@ public final class Solution {
 		Scanner scan = new Scanner(System.in);
 
 		int stockSize = Integer.parseInt(scan.nextLine());
+		ArrayList<Stock> bestPerformers = new ArrayList<Stock>();
+		ArrayList<Stock> worstPerformers = new ArrayList<Stock>();
 
 		// hour 1
 		MinPQ<Stock> hr1Min = new MinPQ<Stock>();
@@ -109,9 +112,9 @@ public final class Solution {
 			hr1Min.insert(temp);
 		}
 
-		hr1Max.print5();
-		hr1Min.print5();
-		
+		hr1Max.print5(bestPerformers);
+		hr1Min.print5(worstPerformers);
+
 
 		// hour 2
 		MinPQ<Stock> hr2Min = new MinPQ<Stock>();
@@ -125,8 +128,8 @@ public final class Solution {
 			hr2Min.insert(temp);
 		}
 
-		hr2Max.print5();
-		hr2Min.print5();
+		hr2Max.print5(bestPerformers);
+		hr2Min.print5(worstPerformers);
 
 		// hour 3
 		MinPQ<Stock> hr3Min = new MinPQ<Stock>();
@@ -140,8 +143,8 @@ public final class Solution {
 			hr3Min.insert(temp);
 		}
 
-		hr3Max.print5();
-		hr3Min.print5();
+		hr3Max.print5(bestPerformers);
+		hr3Min.print5(worstPerformers);
 
 		// hour 4
 		MinPQ<Stock> hr4Min = new MinPQ<Stock>();
@@ -155,8 +158,8 @@ public final class Solution {
 			hr4Min.insert(temp);
 		}
 
-		hr4Max.print5();
-		hr4Min.print5();
+		hr4Max.print5(bestPerformers);
+		hr4Min.print5(worstPerformers);
 
 		// hour 5
 		MinPQ<Stock> hr5Min = new MinPQ<Stock>();
@@ -170,8 +173,8 @@ public final class Solution {
 			hr5Min.insert(temp);
 		}
 
-		hr5Max.print5();
-		hr5Min.print5();		
+		hr5Max.print5(bestPerformers);
+		hr5Min.print5(worstPerformers);
 
 		// hour 6
 		MinPQ<Stock> hr6Min = new MinPQ<Stock>();
@@ -185,8 +188,12 @@ public final class Solution {
 			hr6Min.insert(temp);
 		}
 
-		hr6Max.print5();
-		hr6Min.print5();		
+		hr6Max.print5(bestPerformers);
+		hr6Min.print5(worstPerformers);
 
+	// 	System.out.println("check");
+	// 	for (int i = 0; i < bestPerformers.size(); i++) {
+	// 		System.out.println(bestPerformers.get(i));
+	// 	}
 	}
 }

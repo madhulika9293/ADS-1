@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.ArrayList;
 /**
  * Class for minimum pq.
  *
@@ -163,10 +164,11 @@ public class MinPQ<Key> {
     /**
      * Prints the minimum 5 of the PQ.
      */
-    public void print5() {
+    public void print5(final ArrayList<Key> worst) {
         for (int i = 1; i <= 5; i++) {
-            // System.out.println(pq[i]);
-            System.out.println(delMin());
+            Key temp = delMin();
+            System.out.println(temp);
+            worst.add(temp);
         }
         System.out.print("\n");
     }

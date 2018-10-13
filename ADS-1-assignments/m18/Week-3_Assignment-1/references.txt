@@ -1,1 +1,4 @@
 https://www.geeksforgeeks.org/compare-two-strings-lexicographically-in-java/
+https://www.geeksforgeeks.org/arraylist-in-java/
+https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html
+https://www.google.co.in/search?newwindow=1&ei=t4fBW-GEF8zcvgSim7PgDA&q=arraylist+java+contains+method&oq=arraylist+java+contains+me&gs_l=psy-ab.3.0.0i22i30k1l2.1177798.1180890.0.1182279.12.12.0.0.0.0.150.1321.0j10.10.0....0...1.1.64.psy-ab..2.10.1316...0j0i67k1.0.4ws2zC4oEQA

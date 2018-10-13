@@ -1,7 +1,4 @@
 Starting audit...
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:114: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:174: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:189: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:8:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 1 errors.
