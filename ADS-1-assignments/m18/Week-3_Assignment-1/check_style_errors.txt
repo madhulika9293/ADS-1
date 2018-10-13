@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:96:3: Method length is 200 lines (max allowed is 150). [MethodLength]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:287:14: 'while' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 2 errors.

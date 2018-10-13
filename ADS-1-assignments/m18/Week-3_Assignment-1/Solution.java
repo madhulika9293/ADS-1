@@ -89,6 +89,53 @@ public final class Solution {
   }
 
   /**
+   * Second part of the problem.
+   *
+   * @param      inp     The inp
+   * @param      maxST   The maximum st
+   * @param      minST   The minimum st
+   * @param      stocks  The stocks
+   */
+  public static void secOut(final String[] inp,
+                            final BinaryST<String, Integer> maxST,
+                            final BinaryST<String, Integer> minST,
+                            final ArrayList<String> stocks) {
+    switch (inp[0]) {
+    case "get":
+      if (inp[1].equals("minST")) {
+        if (minST.contains(inp[2])) {
+          System.out.println(minST.get(inp[2]));
+        } else {
+          System.out.println(0);
+        }
+        break;
+      } else if (inp[1].equals("maxST")) {
+        if (maxST.contains(inp[2])) {
+          System.out.println(maxST.get(inp[2]));
+        } else {
+          System.out.println(0);
+        }
+        break;
+      }
+    case "intersection":
+      MinPQ<String> out = new MinPQ<String>();
+      for (int i = 0; i < stocks.size(); i++) {
+        String tem = stocks.get(i);
+        if (minST.contains(tem) && maxST.contains(tem)) {
+          out.insert(tem);
+        }
+      }
+      while (!out.isEmpty()) {
+        System.out.println(out.delMin());
+      }
+      break;
+    default:
+      break;
+    }
+
+
+  }
+  /**
    * Main method - Takes Inputs, prints out Outputs.
    *
    * @param      args  The arguments
@@ -196,17 +243,11 @@ public final class Solution {
     hr6Max.print5(bestPerformers);
     hr6Min.print5(worstPerformers);
 
-    //  System.out.println("check");
-    //  for (int i = 0; i < bestPerformers.size(); i++) {
-    //    System.out.println(bestPerformers.get(i));
-    //  }
-
     ArrayList<String> bestP = new ArrayList<String>();
     ArrayList<String> worstP = new ArrayList<String>();
 
     for (int i = 0; i < bestPerformers.size(); i++) {
       bestP.add(bestPerformers.get(i).getComp());
-      // System.out.println(bestP.get(i));
     }
 
     for (int i = 0; i < worstPerformers.size(); i++) {
@@ -216,15 +257,6 @@ public final class Solution {
     BinaryST<String, Integer> maxST = new BinaryST<String, Integer>();
     BinaryST<String, Integer> minST = new BinaryST<String, Integer>();
 
-    // for (int i = 0; i < stocks.size(); i++) {
-    //   String temp = stocks.get(i);
-    //   if (!bestP.contains(temp)) {
-    //     maxST.put(temp, 0);
-    //   }
-    // }
-
-    // System.out.println(maxST);
-
     for (int i = 0; i < bestP.size(); i++) {
       String temp = bestP.get(i);
       if (!maxST.contains(temp)) {
@@ -233,16 +265,6 @@ public final class Solution {
         maxST.put(temp, maxST.get(temp) + 1);
       }
     }
-    // System.out.println(maxST);
-
-    // for (int i = 0; i < stocks.size(); i++) {
-    //   String temp = stocks.get(i);
-    //   if (!minST.contains(temp)
-    //       && !worstP.contains(temp)) {
-    //     minST.put(temp, 0);
-    //   }
-    // }
-    // System.out.println(minST);
 
     for (int i = 0; i < worstP.size(); i++) {
       String temp = worstP.get(i);
@@ -252,45 +274,11 @@ public final class Solution {
         minST.put(temp, minST.get(temp) + 1);
       }
     }
-
-    // System.out.println(minST);
-
     int numInp = Integer.parseInt(scan.nextLine());
 
     for (int j = 0; j < numInp; j++) {
-      String[] inp = scan.nextLine().split(",");
-      switch (inp[0]) {
-      case "get":
-        if (inp[1].equals("minST")) {
-          if (minST.contains(inp[2])) {
-            System.out.println(minST.get(inp[2]));
-          } else {
-            System.out.println(0);
-          }
-          break;
-        } else if (inp[1].equals("maxST")) {
-          if (maxST.contains(inp[2])) {
-            System.out.println(maxST.get(inp[2]));
-          } else {
-            System.out.println(0);
-          }
-          break;
-        }
-      case "intersection":
-        MinPQ<String> out = new MinPQ<String>();
-        for (int i = 0; i < stocks.size(); i++) {
-          String tem = stocks.get(i);
-          if (minST.contains(tem) && maxST.contains(tem)) {
-            out.insert(tem);
-          }
-        }
-        while(!out.isEmpty()) {
-          System.out.println(out.delMin());
-        }
-        break;
-      default:
-        break;
-      }
+      String[] input = scan.nextLine().split(",");
+      secOut(input, maxST, minST, stocks);
     }
   }
 }
