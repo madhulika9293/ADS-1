@@ -125,7 +125,6 @@ public final class Solution {
 			hr2Min.insert(temp);
 		}
 
-		System.out.println("\n");
 		hr2Max.print5();
 		System.out.println("\n");
 		hr2Min.print5();
@@ -142,7 +141,6 @@ public final class Solution {
 			hr3Min.insert(temp);
 		}
 
-		System.out.println("\n");
 		hr3Max.print5();
 		System.out.println("\n");
 		hr3Min.print5();
@@ -159,7 +157,6 @@ public final class Solution {
 			hr4Min.insert(temp);
 		}
 
-		System.out.println("\n");
 		hr4Max.print5();
 		System.out.println("\n");
 		hr4Min.print5();
@@ -176,7 +173,6 @@ public final class Solution {
 			hr5Min.insert(temp);
 		}
 
-		System.out.println("\n");
 		hr5Max.print5();
 		System.out.println("\n");
 		hr5Min.print5();		
@@ -193,7 +189,6 @@ public final class Solution {
 			hr6Min.insert(temp);
 		}
 
-		System.out.println("\n");
 		hr6Max.print5();
 		System.out.println("\n");
 		hr6Min.print5();		
