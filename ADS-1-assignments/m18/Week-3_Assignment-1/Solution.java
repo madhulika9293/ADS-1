@@ -216,12 +216,12 @@ public final class Solution {
     BinaryST<String, Integer> maxST = new BinaryST<String, Integer>();
     BinaryST<String, Integer> minST = new BinaryST<String, Integer>();
 
-    for (int i = 0; i < stocks.size(); i++) {
-      String temp = stocks.get(i);
-      if (!bestP.contains(temp)) {
-        maxST.put(temp, 0);
-      }
-    }
+    // for (int i = 0; i < stocks.size(); i++) {
+    //   String temp = stocks.get(i);
+    //   if (!bestP.contains(temp)) {
+    //     maxST.put(temp, 0);
+    //   }
+    // }
 
     // System.out.println(maxST);
 
@@ -235,13 +235,13 @@ public final class Solution {
     }
     // System.out.println(maxST);
 
-    for (int i = 0; i < stocks.size(); i++) {
-      String temp = stocks.get(i);
-      if (!minST.contains(temp)
-          && !worstP.contains(temp)) {
-        minST.put(temp, 0);
-      }
-    }
+    // for (int i = 0; i < stocks.size(); i++) {
+    //   String temp = stocks.get(i);
+    //   if (!minST.contains(temp)
+    //       && !worstP.contains(temp)) {
+    //     minST.put(temp, 0);
+    //   }
+    // }
     // System.out.println(minST);
 
     for (int i = 0; i < worstP.size(); i++) {
@@ -277,6 +277,16 @@ public final class Solution {
           break;
         }
       case "intersection":
+        MinPQ<String> out = new MinPQ<String>();
+        for (int i = 0; i < stocks.size(); i++) {
+          String tem = stocks.get(i);
+          if (minST.contains(tem) && maxST.contains(tem)) {
+            out.insert(tem);
+          }
+        }
+        while(!out.isEmpty()) {
+          System.out.println(out.delMin());
+        }
         break;
       default:
         break;
