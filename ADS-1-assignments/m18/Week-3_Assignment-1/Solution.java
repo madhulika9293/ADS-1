@@ -109,7 +109,6 @@ public final class Solution {
 			hr1Min.insert(temp);
 		}
 
-		System.out.println("\n");
 		hr1Max.print5();
 		System.out.println("\n");
 		hr1Min.print5();
