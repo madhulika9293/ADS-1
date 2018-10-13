@@ -110,8 +110,8 @@ public final class Solution {
 		}
 
 		hr1Max.print5();
-		System.out.println("\n");
 		hr1Min.print5();
+		
 
 		// hour 2
 		MinPQ<Stock> hr2Min = new MinPQ<Stock>();
@@ -126,7 +126,6 @@ public final class Solution {
 		}
 
 		hr2Max.print5();
-		System.out.println("\n");
 		hr2Min.print5();
 
 		// hour 3
@@ -142,7 +141,6 @@ public final class Solution {
 		}
 
 		hr3Max.print5();
-		System.out.println("\n");
 		hr3Min.print5();
 
 		// hour 4
@@ -158,7 +156,6 @@ public final class Solution {
 		}
 
 		hr4Max.print5();
-		System.out.println("\n");
 		hr4Min.print5();
 
 		// hour 5
@@ -174,7 +171,6 @@ public final class Solution {
 		}
 
 		hr5Max.print5();
-		System.out.println("\n");
 		hr5Min.print5();		
 
 		// hour 6
@@ -190,7 +186,6 @@ public final class Solution {
 		}
 
 		hr6Max.print5();
-		System.out.println("\n");
 		hr6Min.print5();		
 
 	}
