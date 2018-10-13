@@ -1,0 +1,6 @@
+Starting audit...
+[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:61:30: Parameter that should be final. [FinalParameters]
+[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m18\Week-3_Assignment-1\Solution.java:105: Line is longer than 80 characters (found 89). [LineLength]
+Audit done.
+Checkstyle ends with 3 errors.
