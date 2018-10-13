@@ -175,7 +175,7 @@ public class MaxPQ<Key> {
             // System.out.println(pq[i]);
             System.out.println(delMax());
         }
-        System.out.println("\n");
+        System.out.print("\n");
     }
 }
 

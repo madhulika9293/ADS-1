@@ -168,6 +168,6 @@ public class MinPQ<Key> {
             // System.out.println(pq[i]);
             System.out.println(delMin());
         }
-        System.out.println("\n");
+        System.out.print("\n");
     }
 }
