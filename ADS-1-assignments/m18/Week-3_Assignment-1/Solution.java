@@ -58,7 +58,7 @@ class Stock implements Comparable<Stock> {
 	 *
 	 * @return     Integer value to compare.
 	 */
-	public int compareTo(Stock that) {
+	public int compareTo(final Stock that) {
 		if (this.change > that.getChange()) {
 			return 1;
 		}
@@ -97,12 +97,14 @@ public final class Solution {
 
 		int stockSize = Integer.parseInt(scan.nextLine());
 
+		// hour 1
 		MinPQ<Stock> hr1Min = new MinPQ<Stock>();
 		MaxPQ<Stock> hr1Max = new MaxPQ<Stock>();
 
 		for (int i = 0; i < stockSize; i++) {
 			String[] inputs = scan.nextLine().split(",");
-			Stock temp = new Stock(inputs[0], Double.parseDouble(inputs[1]));
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
 			hr1Max.insert(temp);
 			hr1Min.insert(temp);
 		}
@@ -111,5 +113,91 @@ public final class Solution {
 		hr1Max.print5();
 		System.out.println("\n");
 		hr1Min.print5();
+
+		// hour 2
+		MinPQ<Stock> hr2Min = new MinPQ<Stock>();
+		MaxPQ<Stock> hr2Max = new MaxPQ<Stock>();
+
+		for (int i = 0; i < stockSize; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			hr2Max.insert(temp);
+			hr2Min.insert(temp);
+		}
+
+		System.out.println("\n");
+		hr2Max.print5();
+		System.out.println("\n");
+		hr2Min.print5();
+
+		// hour 3
+		MinPQ<Stock> hr3Min = new MinPQ<Stock>();
+		MaxPQ<Stock> hr3Max = new MaxPQ<Stock>();
+
+		for (int i = 0; i < stockSize; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			hr3Max.insert(temp);
+			hr3Min.insert(temp);
+		}
+
+		System.out.println("\n");
+		hr3Max.print5();
+		System.out.println("\n");
+		hr3Min.print5();
+
+		// hour 4
+		MinPQ<Stock> hr4Min = new MinPQ<Stock>();
+		MaxPQ<Stock> hr4Max = new MaxPQ<Stock>();
+
+		for (int i = 0; i < stockSize; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			hr4Max.insert(temp);
+			hr4Min.insert(temp);
+		}
+
+		System.out.println("\n");
+		hr4Max.print5();
+		System.out.println("\n");
+		hr4Min.print5();
+
+		// hour 5
+		MinPQ<Stock> hr5Min = new MinPQ<Stock>();
+		MaxPQ<Stock> hr5Max = new MaxPQ<Stock>();
+
+		for (int i = 0; i < stockSize; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			hr5Max.insert(temp);
+			hr5Min.insert(temp);
+		}
+
+		System.out.println("\n");
+		hr5Max.print5();
+		System.out.println("\n");
+		hr5Min.print5();		
+
+		// hour 6
+		MinPQ<Stock> hr6Min = new MinPQ<Stock>();
+		MaxPQ<Stock> hr6Max = new MaxPQ<Stock>();
+
+		for (int i = 0; i < stockSize; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			hr6Max.insert(temp);
+			hr6Min.insert(temp);
+		}
+
+		System.out.println("\n");
+		hr6Max.print5();
+		System.out.println("\n");
+		hr6Min.print5();		
+
 	}
 }
