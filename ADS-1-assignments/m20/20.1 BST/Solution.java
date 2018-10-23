@@ -28,7 +28,8 @@ final class Solution {
             case "get":
                 System.out.println(bst.get(new Book(tokens[1],
                                                     tokens[2],
-                                                    Double.parseDouble(tokens[2 + 1]))));
+                                                    Double.parseDouble(
+                                                        tokens[2 + 1]))));
                 break;
             case "max":
                 System.out.println(bst.max());
@@ -39,12 +40,15 @@ final class Solution {
             case "floor":
                 System.out.println(bst.floor(new Book(tokens[1],
                                                       tokens[2],
-                                                      Double.parseDouble(tokens[2 + 1]))));
+                                                      Double.parseDouble(
+                                                              tokens[2 + 1]))));
                 break;
             case "ceiling":
                 System.out.println(bst.ceiling(new Book(tokens[1],
                                                         tokens[2],
-                                                        Double.parseDouble(tokens[2 + 1]))));
+                                                        Double.parseDouble(
+                                                                tokens[
+                                                                2 + 1]))));
                 break;
             case "select":
                 System.out.println(bst.select(Integer.parseInt(tokens[1])));
