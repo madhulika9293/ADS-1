@@ -1,0 +1,1 @@
+Of the given trees, only (iii) & (iv) are red-black binary search trees. As the number of black nodes from the root to leaf are constant.
