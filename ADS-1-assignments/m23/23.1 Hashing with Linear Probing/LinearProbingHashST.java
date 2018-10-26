@@ -210,30 +210,17 @@ public class LinearProbingHashST<Key, Value> {
      */
     public String toString() {
         String out = "{";
-        for (Key s : this.keys()) {
-            out += s;
-            out += ":";
-            out += this.get(s);
-            out += ", ";
+        if (this.size() != 0) {
+            for (Key s : this.keys()) {
+                out += s;
+                out += ":";
+                out += this.get(s);
+                out += ", ";
+            }
+            out = out.substring(0, out.length() - 2) + "}";
+            return out;
+        } else {
+            return out + "}";
         }
-        out = out.substring(0, out.length() - 2) + "}";
-        return out;
     }
-
-    // /**
-    //  * Unit tests the {@code LinearProbingHashST} data type.
-    //  *
-    //  * @param args the command-line arguments
-    //  */
-    // public static void main(String[] args) {
-    //     LinearProbingHashST<String, Integer> st = new LinearProbingHashST<String, Integer>();
-    //     for (int i = 0; !StdIn.isEmpty(); i++) {
-    //         String key = StdIn.readString();
-    //         st.put(key, i);
-    //     }
-
-    //     // print keys
-    //     for (String s : st.keys())
-    //         StdOut.println(s + " " + st.get(s));
-    // }
 }
