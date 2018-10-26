@@ -1,6 +1,4 @@
 Starting audit...
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m23\23.1 Hashing with Linear Probing\Solution.java:6: Class Solution should be declared as final. [FinalClass]
 [ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m23\23.1 Hashing with Linear Probing\Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m23\23.1 Hashing with Linear Probing\Solution.java:27: Line is longer than 80 characters (found 82). [LineLength]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.

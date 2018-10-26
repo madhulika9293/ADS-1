@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 	/**
 	 * Constructs the object.
 	 */
@@ -24,7 +24,8 @@ public class Solution {
 			String[] tokens = scan.nextLine().split(" ");
 			switch (tokens[0]) {
 			case "put":
-				probe.put(tokens[1], Integer.parseInt(tokens[2]));
+				probe.put(tokens[1],
+				          Integer.parseInt(tokens[2]));
 				break;
 			case "get":
 				System.out.println(probe.get(tokens[1]));
