@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m24\1\Student.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\MSIT\First Year\IT\ADS-1\ADS-1-assignments\m24\1\Student.java:25:9: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 2 errors.
