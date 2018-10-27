@@ -28,35 +28,45 @@ public final class Solution {
 
     int n = Integer.parseInt(scan.nextLine());
 
-    BST<Integer, Student> section = new BST<>();
+    BST<Student, Integer> section = new BST<>();
 
     for (int i = 0; i < n; i++) {
       String[] inp = scan.nextLine().split(",");
       Student temp = new Student(Integer.parseInt(inp[0]),
                                  inp[1],
                                  Double.parseDouble(inp[2]));
-      section.put(Integer.parseInt(inp[0]), temp);
+      section.put(temp, Integer.parseInt(inp[0]));
     }
 
     int m = Integer.parseInt(scan.nextLine());
 
     for (int j = 0; j < m; j++) {
       String[] tokens = scan.nextLine().split(" ");
-      switch (tokens[2]) {
-      case "1":
-        try {
-          System.out.println(section.get(
-                               Integer.parseInt(tokens[1])).getName());
-        } catch (Exception e) {
-          System.out.println("Student doesn't exists...");
+      switch (tokens[0]) {
+      case "BE":
+        double min = Double.parseDouble(tokens[1]);
+        double max = Double.parseDouble(tokens[2]);
+        for (Student each : section.keys()) {
+          if (each.getMarks() >= min
+              && each.getMarks() <= max) {
+            System.out.println(each);
+          }
         }
         break;
-      case "2":
-        try {
-          System.out.println(section.get(
-                               Integer.parseInt(tokens[1])).getMarks());
-        } catch (Exception e) {
-          System.out.println("Student doesn't exists...");
+      case "LE":
+        double bound = Double.parseDouble(tokens[1]);
+        for (Student each : section.keys()) {
+          if (each.getMarks() <= bound) {
+            System.out.println(each);
+          }
+        }
+        break;
+      case "GE":
+        double bound1 = Double.parseDouble(tokens[1]);
+        for (Student each : section.keys()) {
+          if (each.getMarks() >= bound1) {
+            System.out.println(each);
+          }
         }
         break;
       default:
