@@ -17,12 +17,14 @@ public final class Solution {
    * @param      args  The arguments
    */
   public static void main(final String[] args) {
+
+    final int three = 3;
     Scanner scan = new Scanner(System.in);
 
     int n = Integer.parseInt(scan.nextLine());
 
     LinearProbingHashST<Integer, Student> section =
-      new LinearProbingHashST<>(3 * n);
+      new LinearProbingHashST<>(three * n);
 
     for (int i = 0; i < n; i++) {
       String[] inp = scan.nextLine().split(",");
