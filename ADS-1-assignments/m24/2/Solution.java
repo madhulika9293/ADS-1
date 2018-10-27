@@ -28,7 +28,7 @@ public final class Solution {
 
     int n = Integer.parseInt(scan.nextLine());
 
-    BinarySearchTree section = new BinarySearchTree();
+    BST<Integer, Student> section = new BST<>();
 
     for (int i = 0; i < n; i++) {
       String[] inp = scan.nextLine().split(",");
