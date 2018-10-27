@@ -14,6 +14,14 @@ public final class Solution {
   /**
    * Main method.
    *
+   * Complexity (average case):
+   *
+   * For inserting - constant time as Linear probing hash table
+   *                          was used.
+
+   * For searching - constant time as Linear probing hash table
+   *                          was used.
+   *
    * @param      args  The arguments
    */
   public static void main(final String[] args) {
