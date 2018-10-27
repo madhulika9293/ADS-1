@@ -38,12 +38,20 @@ public final class Solution {
       String[] tokens = scan.nextLine().split(" ");
       switch (tokens[2]) {
       case "1":
-        System.out.println(section.get(
-                             Integer.parseInt(tokens[1])).getName());
+        try {
+          System.out.println(section.get(
+                               Integer.parseInt(tokens[1])).getName());
+        } catch (Exception e) {
+          System.out.println("Student doesn't exists...");
+        }
         break;
       case "2":
-        System.out.println(section.get(
-                             Integer.parseInt(tokens[1])).getMarks());
+        try {
+          System.out.println(section.get(
+                               Integer.parseInt(tokens[1])).getMarks());
+        } catch (Exception e) {
+          System.out.println("Student doesn't exists...");
+        }
         break;
       default:
         break;
