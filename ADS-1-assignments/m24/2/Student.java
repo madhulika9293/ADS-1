@@ -1,7 +1,7 @@
 /**
  * Class for student.
  */
-class Student implements Comparable<Student>{
+class Student implements Comparable<Student> {
     /**
      * Roll number.
      */
@@ -56,7 +56,14 @@ class Student implements Comparable<Student>{
         return this.name;
     }
 
-    public int compareTo(Student other) {
+    /**
+     * Compares.
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int compareTo(final Student other) {
         if (this.marks > other.marks) {
             return 1;
         }
